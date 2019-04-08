@@ -1,0 +1,10 @@
+@font-face {
+    font-family: "main";
+    src: url("main.ttf");
+}
+html, body, div, canvas {
+    background: #bdc3c7;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+}
