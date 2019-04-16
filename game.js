@@ -2,6 +2,8 @@
 // I had less than 30 days to make this AND I still work full-time at a software company...
 //Enjoy looking at the code!
 
+//Multiplayer
+
 let gameArea = {
     canvas: document.createElement("canvas"),
     start: function() {
@@ -9,6 +11,7 @@ let gameArea = {
         transition();
     },
     title: function() {
+        this.currentFrame = getUrlParam('frame', 1);
         this.canvas.width = window.innerWidth;
         this.canvas.height = window.innerHeight;
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
@@ -20,7 +23,7 @@ let gameArea = {
     objectives: null,
     variable_icons: null,
     fontSize: 20,
-    currentFrame: getUrlParam('frame', 1),
+    currentFrame: 0,
 }
 
 //With the current settings and testing on a 55Inch tv (4k) (110% zoom), The max question length is 375, while the max option length is 140
@@ -32,6 +35,7 @@ function startGame(){
 
 //Main drawing function
 function createFrame(callback){
+
     let frame = gameArea.data.frames[gameArea.currentFrame];
 
     drawBackgrounds(frame['backgrounds'], function(){
@@ -65,7 +69,7 @@ function drawQuestion(question, callback) {
     ctx.stroke();
     ctx.fillStyle = "#FFFFFF";
 
-    typeOut(question,(window.innerWidth / 2) - 300,(window.innerHeight / 2) + 100, gameArea.fontSize, width, function(){
+    typeOut(question,(window.innerWidth / 2) - 300,(window.innerHeight / 2) + 100, gameArea.fontSize, width, "#FFFFFF" ,function(){
         callback(true);
     });
 }
@@ -89,7 +93,7 @@ function drawOptions(optionsArray, callback) {
         var optionLines = getLines(ctx,  optionKey + "  : " + value,300);
 
         for (var line in optionLines){
-            fadeInText(ctx,optionLines[line],x,y + (line * gameArea.fontSize - 2));
+            fadeInText(ctx,optionLines[line],x,y + (line * gameArea.fontSize - 2), 255,255,255);
         }
     }
 
@@ -311,9 +315,13 @@ function handleReward(selectedOption){
                 gameArea.variables[variable] = gameArea.variables[variable] + value;
             } else {
 
-                value = replaceStringVariables(value);
+                value = replaceAllStringVariables(value);
 
-                gameArea.variables[variable] = eval(value);
+                if (value.match(/[a-z]/i)) {
+                    gameArea.variables[variable] = value;
+                } else {
+                    gameArea.variables[variable] = eval(value);
+                }
 
             }
 
@@ -322,7 +330,7 @@ function handleReward(selectedOption){
 
     completedObjective(function(complete){
         console.log("User has hit objective! ==> " + complete);
-    })
+    });
 }
 
 function getObjectiveValues(){
@@ -356,6 +364,74 @@ function completedObjective(callback){
 }
 
 function hitEndGame(callback){
+
+    console.log(gameArea.currentFrame);
+
+    clearScreen();
+
+    var endMessage = gameArea.variables['endMessage'];
+
+    var end = gameArea.data['end'];
+
+    var ctx = gameArea.canvas.getContext("2d");
+
+    var img = new Image();
+
+    var width = end['width'];
+    var height = end['height'];
+
+    img.onload = function(){
+
+        var thisWidth = width;
+        var thisHeight = height;
+        var thisX = (window.innerWidth / 2) - (thisWidth / 2);
+        var thisY = (window.innerHeight / 2) - (thisHeight / 2);
+
+        return function(){
+            ctx.drawImage(this,thisX,thisY,thisWidth,thisHeight);
+        }
+
+    }();
+
+    img.src = end['url'];
+
+    var text = end['text'];
+
+    var x = text['x'];
+    var y = text['y'];
+    var size = text['size'];
+    var width = text['width'];
+
+    if (x.includes("center")) {
+        x = (window.innerWidth / 2) - (width / 2);
+    }
+
+    if (y.includes("center")) {
+        y = (window.innerHeight / 2);
+    }
+
+    typeOut(endMessage,x,y, size, width, text['color'],function(){
+        console.log("Game is completely over, The next key tap will reload the page.");
+
+        gameArea.canvas.getContext("2d").font = "40px main";
+
+        fadeInText(ctx,"Press any key to restart...", (window.innerWidth / 2) - 230,(window.innerHeight - 200),0,0,0);
+
+        var handler = function (e) {
+            window.removeEventListener('keydown', handler);
+
+            // location.reload(true);
+
+            gameArea.title();
+        };
+
+        window.addEventListener('keydown', handler);
+
+    });
+
+
+    // ctx.fillText(endMessage,text['x'],text['y']);
+
     callback();
 }
 
@@ -379,7 +455,6 @@ function clearScreen(){
 }
 
 //Events \/
-
 $(window).on('load', function(){
 
     if (window.innerHeight <= 899 || window.innerWidth <= 899){
@@ -387,7 +462,10 @@ $(window).on('load', function(){
         alert("Your screen size is too small, If you are on a mobile device you need to view this on a computer. " +
             "If you are on a computer you need to zoom out. You can do this by doing (CMD & -) or (CTRL & -). Once you have zoomed out, Just reload the page! (900x900) Screen size min!");
     } else {
-        gameArea.title();
+        preloadAllFrameData(function(){
+            gameArea.title();
+        });
+
     }
 
 
@@ -437,71 +515,34 @@ function showStartScreen(){
     });
 }
 
-function showEndGameScreen(){
-
-}
-
 function listenKeyDown() {
 
     var handler = function (e) {
 
         var frame = gameArea.data.frames[gameArea.currentFrame];
         var path = frame['path'];
-        var nextFrame = 0;
+        var nextFrame = path[e.key.toUpperCase()];
 
-        console.log(e.key + " has been pressed!");
+        console.log(e.key.toUpperCase() + " has been pressed!");
 
-        switch(e.keyCode){
-            case 65: {
-                nextFrame = path["A"];
-                //A
-                if (varUndefined(nextFrame)){
-                    break;
-                }
-                handleReward('A');
-                window.removeEventListener('keydown', handler);
-                gameArea.currentFrame = nextFrame;
-                transition();
-                break;
+        if (!varUndefined(nextFrame)){
+
+            window.removeEventListener('keydown', handler);
+            handleReward(e.key.toUpperCase());
+
+            if (nextFrame == "end") {
+                hitEndGame(function(){
+                    console.log('Game has hit the end.');
+                });
+                return;
             }
-            case 66: {
-                nextFrame = path["B"];
-                //B
-                if (varUndefined(nextFrame)){
-                    break;
-                }
-                handleReward('B');
-                window.removeEventListener('keydown', handler);
-                gameArea.currentFrame = nextFrame;
-                transition();
-                break;
-            }
-            case 67: {
-                nextFrame = path["C"];
-                //C
-                if (varUndefined(nextFrame)){
-                    break;
-                }
-                handleReward('C');
-                window.removeEventListener('keydown', handler);
-                gameArea.currentFrame = nextFrame;
-                transition();
-                break;
-            }
-            case 68: {
-                nextFrame = path["D"];
-                //D
-                if (varUndefined(nextFrame)){
-                    break;
-                }
-                handleReward('D');
-                window.removeEventListener('keydown', handler);
-                gameArea.currentFrame = nextFrame;
-                transition();
-                break;
-            }
+
+
+            gameArea.currentFrame = nextFrame;
+            transition();
+
         }
-
+        return;
     };
 
     window.addEventListener('keydown', handler);
@@ -517,7 +558,7 @@ function listenKeyDown() {
 
 //Helper functions \/
 
-function typeOut(str, startX, startY, lineHeight, lineWidth, callback) {
+function typeOut(str, startX, startY, lineHeight, lineWidth, color, callback) {
     var ctx = gameArea.canvas.getContext("2d");
     var canvas = gameArea.canvas;
 
@@ -535,7 +576,7 @@ function typeOut(str, startX, startY, lineHeight, lineWidth, callback) {
             cursorX = startX;
             cursorY += lineHeight;
         }
-        ctx.fillStyle = "#FFFFFF";
+        ctx.fillStyle = color;
         ctx.fillText(str.charAt(i), cursorX, cursorY);
         i++;
         cursorX += w;
@@ -566,10 +607,10 @@ function getLines(ctx, text, maxWidth) {
     return lines;
 }
 
-function fadeInText(ctx,text, x, y) {
+function fadeInText(ctx,text, x, y, R,G,B) {
     var alpha = 0.0,
     interval = setInterval(function () {
-        ctx.fillStyle = "rgba(255, 255, 255, " + alpha + ")";
+        ctx.fillStyle = "rgba("+R+", "+G+", "+B+", " + alpha + ")";
         ctx.fillText(text, x, y);
         alpha = alpha + 0.05; // increase opacity (fade in)
         if (alpha >= 0.39){
@@ -616,4 +657,56 @@ function replaceAllStringVariables(string) {
 
 function varUndefined(value){
     return (typeof value === 'undefined');
+}
+
+function preloadAllFrameData(callback) {
+
+    var ctx = document.createElement("canvas").getContext("2d");
+    var imgs = [];
+    var imgIndex = 0;
+
+    $.getJSON("https://techwizmatt.info/projects/school/eng/game/frames/list.php",{}, function(imagesArray){
+
+        var complete = 0;
+        var count = Object.values(imagesArray).length - 1;
+
+        for (var image in imagesArray){
+            var width = 1000;
+            var height = 1000;
+            var x = 0
+            var y = 0
+            var url = imagesArray[image];
+
+            imgs[imgIndex] = new Image();
+            // img.src = url;
+
+            imgs[imgIndex].onload = function(){
+
+                var thisX = x;
+                var thisY = y;
+                var thisWidth = width;
+                var thisHeight = height;
+
+                return function(){
+                    ctx.drawImage(this,thisX,thisY,thisWidth,thisHeight);
+                    ctx.font = "100px main";
+                    ctx.fillText("TEST",0,0);
+                    complete++;
+
+                    console.log("Loaded: " + complete + "/" + count);
+
+                    if (complete == count) {
+                        console.log('All images have been loaded');
+                        callback(true);
+                    }
+                }
+
+            }();
+
+            imgs[imgIndex].src = 'frames/' + url;
+
+            imgIndex += 1;
+        }
+
+    });
 }
