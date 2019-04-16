@@ -665,7 +665,7 @@ function preloadAllFrameData(callback) {
     var imgs = [];
     var imgIndex = 0;
 
-    $.getJSON("https://techwizmatt.info/projects/school/eng/game/frames/list.php",{}, function(imagesArray){
+    $.getJSON("http://techwizmatt.info/projects/school/eng/game/frames/list.php",{}, function(imagesArray){
 
         var complete = 0;
         var count = Object.values(imagesArray).length - 1;
