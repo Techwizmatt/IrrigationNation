@@ -413,7 +413,7 @@
           "money": 0
         },
         "B": {
-          "money": 0
+          "endMessage": "Because you refused the Taliban, they kill you and take everything you own..."
         },
         "C": {
           "money": 0
@@ -1081,20 +1081,15 @@
     "height": 771
   },
   "end": {
-    "food": {
-      "url": "frames/foodEnd.png",
-      "width": "",
-      "height": ""
-    },
-    "family": {
-      "url": "frames/familyEnd.png",
-      "width": "",
-      "height": ""
-    },
-    "money": {
-      "url": "frames/moneyEnd.png",
-      "width": "",
-      "height": ""
+    "url": "frames/end.png",
+    "width": 1063,
+    "height": 771,
+    "text": {
+      "color": "#FF0000",
+      "size": 25,
+      "width": 600,
+      "x": "center",
+      "y": "center"
     }
   },
   "objectives": [
