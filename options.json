@@ -272,18 +272,6 @@
         "D": "8"
       },
       "reward": {
-        "A": {
-          "money": 0
-        },
-        "B": {
-          "money": 0
-        },
-        "C": {
-          "money": 0
-        },
-        "D": {
-          "money": 0
-        }
       },
       "images": [
         {
@@ -409,17 +397,8 @@
         "D": "10"
       },
       "reward": {
-        "A": {
-          "money": 0
-        },
         "B": {
           "endMessage": "Because you refused the Taliban, they kill you and take everything you own..."
-        },
-        "C": {
-          "money": 0
-        },
-        "D": {
-          "money": 0
         }
       },
       "images": [
@@ -849,18 +828,6 @@
         "D": "0"
       },
       "reward": {
-        "A": {
-          "money": 0
-        },
-        "B": {
-          "money": 0
-        },
-        "C": {
-          "money": 0
-        },
-        "D": {
-          "money": 0
-        }
       },
       "images": [
         {
@@ -899,18 +866,6 @@
         "D": "0"
       },
       "reward": {
-        "A": {
-          "money": 0
-        },
-        "B": {
-          "money": 0
-        },
-        "C": {
-          "money": 0
-        },
-        "D": {
-          "money": 0
-        }
       },
       "images": [
         {
@@ -983,18 +938,6 @@
         "B": "18"
       },
       "reward": {
-        "A": {
-          "money": 0
-        },
-        "B": {
-          "money": 0
-        },
-        "C": {
-          "money": 0
-        },
-        "D": {
-          "money": 0
-        }
       },
       "images": [
         {
@@ -1029,18 +972,6 @@
         "B": "9"
       },
       "reward": {
-        "A": {
-          "money": 0
-        },
-        "B": {
-          "money": 0
-        },
-        "C": {
-          "money": 0
-        },
-        "D": {
-          "money": 0
-        }
       },
       "images": [
         {
@@ -1075,18 +1006,6 @@
         "B": "0"
       },
       "reward": {
-        "A": {
-          "money": 0
-        },
-        "B": {
-          "money": 0
-        },
-        "C": {
-          "money": 0
-        },
-        "D": {
-          "money": 0
-        }
       },
       "images": [
         {
@@ -1169,18 +1088,6 @@
         "B": "34"
       },
       "reward": {
-        "A": {
-          "money": 0
-        },
-        "B": {
-          "money": 0
-        },
-        "C": {
-          "money": 0
-        },
-        "D": {
-          "money": 0
-        }
       },
       "images": [
         {
@@ -1215,18 +1122,6 @@
         "B": "23"
       },
       "reward": {
-        "A": {
-          "money": 0
-        },
-        "B": {
-          "money": 0
-        },
-        "C": {
-          "money": 0
-        },
-        "D": {
-          "money": 0
-        }
       },
       "images": [
         {
@@ -1302,18 +1197,6 @@
         "B": "24"
       },
       "reward": {
-        "A": {
-          "money": 0
-        },
-        "B": {
-          "money": 0
-        },
-        "C": {
-          "money": 0
-        },
-        "D": {
-          "money": 0
-        }
       },
       "images": [
         {
@@ -1346,18 +1229,6 @@
         "all": "24"
       },
       "reward": {
-        "A": {
-          "money": 0
-        },
-        "B": {
-          "money": 0
-        },
-        "C": {
-          "money": 0
-        },
-        "D": {
-          "money": 0
-        }
       },
       "images": [
         {
@@ -2032,7 +1903,7 @@
   "endgame": [
     {
       "id": 1,
-      "money": 0,
+      "money": 1000,
       "family": 0,
       "food": 0
     },

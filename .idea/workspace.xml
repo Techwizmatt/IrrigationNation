@@ -45,8 +45,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/options.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="24" column="18" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+            <state relative-caret-position="620">
+              <caret line="1927" column="4" lean-forward="true" selection-start-line="1927" selection-start-column="4" selection-end-line="1927" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -102,6 +102,7 @@
       <find>image</find>
       <find>&quot;5&quot;</find>
       <find>&quot;14&quot;</find>
+      <find>&quot;money&quot;: 0</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -231,12 +232,12 @@
       <workItem from="1555474344478" duration="68000" />
       <workItem from="1555474429398" duration="676000" />
       <workItem from="1555475119414" duration="44000" />
-      <workItem from="1555475187431" duration="13830000" />
+      <workItem from="1555475187431" duration="14180000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112625000" />
+    <option name="totallyTimeSpent" value="112975000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -246,7 +247,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32970297" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -255,7 +256,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="File Transfer" order="9" weight="0.32970297" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49946752" visible="true" weight="0.32970297" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49946752" weight="0.32970297" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5005325" side_tool="true" weight="0.32970297" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -343,8 +344,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/options.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="24" column="18" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+        <state relative-caret-position="620">
+          <caret line="1927" column="4" lean-forward="true" selection-start-line="1927" selection-start-column="4" selection-end-line="1927" selection-end-column="4" />
         </state>
       </provider>
     </entry>
