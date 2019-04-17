@@ -8,10 +8,6 @@
     <list default="true" id="0cd9c84a-c176-4dca-a43f-8a32e7533d1c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Electron" beforeDir="false" afterPath="$PROJECT_DIR$/Electron" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Electron/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Electron/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game.css" beforeDir="false" afterPath="$PROJECT_DIR$/game.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/game.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/options.json" beforeDir="false" afterPath="$PROJECT_DIR$/options.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,8 +23,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="458" column="66" lean-forward="true" selection-start-line="458" selection-start-column="66" selection-end-line="458" selection-end-column="66" />
+            <state relative-caret-position="513">
+              <caret line="478" lean-forward="true" selection-start-line="478" selection-end-line="478" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
@@ -247,16 +243,15 @@
       <workItem from="1555474344478" duration="68000" />
       <workItem from="1555474429398" duration="676000" />
       <workItem from="1555475119414" duration="44000" />
-      <workItem from="1555475187431" duration="21169000" />
+      <workItem from="1555475187431" duration="22327000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119964000" />
+    <option name="totallyTimeSpent" value="121122000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27635783" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -364,8 +359,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="458" column="66" lean-forward="true" selection-start-line="458" selection-start-column="66" selection-end-line="458" selection-end-column="66" />
+        <state relative-caret-position="513">
+          <caret line="478" lean-forward="true" selection-start-line="478" selection-end-line="478" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
