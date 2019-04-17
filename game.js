@@ -2,6 +2,8 @@
 // I had less than 30 days to make this AND I still work full-time at a software company...
 //Enjoy looking at the code!
 
+//Multiplayer
+
 let gameArea = {
     canvas: document.createElement("canvas"),
     start: function() {

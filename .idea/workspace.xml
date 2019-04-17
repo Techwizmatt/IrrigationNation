@@ -11,7 +11,7 @@
       <change beforePath="$PROJECT_DIR$/game.css" beforeDir="false" afterPath="$PROJECT_DIR$/game.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/game.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/options.json" beforeDir="false" afterPath="$PROJECT_DIR$/options.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multiplayer.js" beforeDir="false" afterPath="$PROJECT_DIR$/multiplayer.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,7 +24,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="213">
@@ -37,6 +37,15 @@
                 <element signature="e#91#97#0" expanded="true" />
                 <element signature="n#style#0;n#p#1;n#span#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/multiplayer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="32" column="60" lean-forward="true" selection-start-line="32" selection-start-column="60" selection-end-line="32" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -146,7 +155,6 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/contents/index.html" />
         <option value="$PROJECT_DIR$/main.js" />
-        <option value="$PROJECT_DIR$/multiplayer.js" />
         <option value="$PROJECT_DIR$/events.js" />
         <option value="$PROJECT_DIR$/frames/list.php" />
         <option value="$PROJECT_DIR$/helper.js" />
@@ -154,6 +162,7 @@
         <option value="$PROJECT_DIR$/game.css" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/game.js" />
+        <option value="$PROJECT_DIR$/multiplayer.js" />
       </list>
     </option>
   </component>
@@ -347,6 +356,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/game.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
@@ -374,6 +390,13 @@
             <element signature="e#91#97#0" expanded="true" />
             <element signature="n#style#0;n#p#1;n#span#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/multiplayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="60" lean-forward="true" selection-start-line="32" selection-start-column="60" selection-end-line="32" selection-end-column="60" />
         </state>
       </provider>
     </entry>
