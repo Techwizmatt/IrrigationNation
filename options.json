@@ -268,7 +268,7 @@
       "path": {
         "A": "5",
         "B": "9",
-        "C": "4",
+        "C": "7",
         "D": "8"
       },
       "reward": {
@@ -777,7 +777,7 @@
       ]
     },
     "11": {
-      "question": "While you are growing poppy a wild tribe of Taliban come by and forcefully take all of your poppy! What do you do?",
+      "question": "The Taliban is going to take over your farm, What do you do?",
       "options": {
         "A": "Try to defend your farm.",
         "B": "Allow them to take your poppy and leave."
@@ -816,18 +816,17 @@
     "12": {
       "question": "Your neighbor can't do much. What do you want to do now?",
       "options": {
-        "A": "Unknown",
-        "B": "Unknown",
-        "C": "Unknown",
-        "D": "Unknown"
+        "A": "A few weeks have gone by, Find help",
+        "B": "Try to steal from neighbor and take some of his food"
       },
       "path": {
-        "A": "0",
-        "B": "0",
-        "C": "0",
-        "D": "0"
+        "A": "20",
+        "B": "end"
       },
       "reward": {
+        "B": {
+          "endMessage": "Your neighbor saw you stealing and shoots you dead"
+        }
       },
       "images": [
         {
@@ -890,7 +889,7 @@
       ]
     },
     "14": {
-      "question": "How much do you want for hald of $food food you have?",
+      "question": "How much do you want for half of $food food you have?",
       "options": {
         "A": "$1 for each food",
         "B": "$1.5 for each food",
@@ -965,7 +964,7 @@
       "question": "You started growing poppy and it's all gone now. What are you going to do?",
       "options": {
         "A": "Grow different crops",
-        "B": "Try to survice with the rations you have left"
+        "B": "Try to survive with the rations you have left"
       },
       "path": {
         "A": "8",
@@ -996,14 +995,12 @@
       ]
     },
     "17": {
-      "question": "You have asked for too much, You have been denied access selling your crops. What do you want to do?",
+      "question": "A month passes growing poppy, The Taliban has learned that you are becoming profitable and is displeased",
       "options": {
-        "A": "Unknown",
-        "B": "Unknown"
+        "all": "all"
       },
       "path": {
-        "A": "0",
-        "B": "0"
+        "all": "11"
       },
       "reward": {
       },
@@ -1338,7 +1335,7 @@
       },
       "path": {
         "A": "38",
-        "B": "26"
+        "B": "end"
       },
       "reward": {
         "B": {

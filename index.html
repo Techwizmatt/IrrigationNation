@@ -21,6 +21,14 @@
 <body style="margin:0 !important; overflow: hidden !important;">
 <div id="preloader" style="display: block; position: fixed; left:0; top:0;width:100%;height: 100%; background: url('https://i.imgur.com/L7epMzE.gif') #bdc3c7 no-repeat; background-position: center; background-size: 100px" ></div>
 <!--The game canvas will be created here-->
+<div id="debug" style="display: none; position: fixed; left:0; bottom: 0; height: 250px; width: 400px; background: #2980b9; color: white; border: 0; border-top-right-radius: 10px;">
+   <h1 style="margin:0;padding-top: 5px;padding-left: 5px;">Debugger</h1>
+   <button onclick="clearLog();" style="position: absolute; top: 0; right:10px; width: 100px; height: 30px; background: #34495e; border:0; border-radius: 5px; color: white; margin-top: 10px !important; cursor: pointer;outline:none !important;">Clear log</button>
+    <button onclick="downloadLog();" style="position: absolute; top: 0; right:120px; width: 100px; height: 30px; background: #34495e; border:0; border-radius: 5px; color: white; margin-top: 10px !important; cursor: pointer;outline:none !important;">Save log</button>
+    <div id="debugLog" style="position: absolute;bottom:0;left:0;right:0;top:45px; overflow: scroll !important; background: #000000;margin: 5px !important; margin-bottom: 5px !important; padding: 2px;">
+
+    </div>
+</div>
 </body>
 </html>
 <!--

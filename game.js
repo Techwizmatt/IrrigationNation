@@ -22,13 +22,14 @@ let gameArea = {
     variable_icons: null,
     fontSize: 20,
     currentFrame: 0,
+    uuid: uuidv4()
 }
 
 //With the current settings and testing on a 55Inch tv (4k) (110% zoom), The max question length is 375, while the max option length is 140
 
 function startGame(){
     gameArea.start();
-    console.log("The game has started!");
+    debuggerLog("The game has started!");
 }
 
 //Main drawing function
@@ -197,6 +198,7 @@ function drawImages(imagesArray, callback) {
             }
 
         }();
+        url = url + '?cacheControlID='+gameArea.uuid;
         imgs[imgIndex].src = url;
         imgIndex += 1;
     }
@@ -333,6 +335,7 @@ function drawVariables(callback){
             }
 
         }(variable);
+        url = url+ '?cacheControlID='+gameArea.uuid;
         imgs[imgIndex].src = url;
         imgIndex += 1;
 
@@ -349,6 +352,7 @@ function handleReward(selectedOption){
         for (var variable in reward) {
 
             var value = reward[variable];
+            var beforeDebug = gameArea.variables[variable]
 
             if (!isNaN(reward[variable])) {
                 gameArea.variables[variable] = gameArea.variables[variable] + value;
@@ -364,11 +368,14 @@ function handleReward(selectedOption){
 
             }
 
+            debuggerLog(variable + " = " + beforeDebug + " + " + value + " -> " + gameArea.variables[variable]);
         }
     }
 
     completedObjective(function(complete){
-        console.log("User has hit objective! ==> " + complete);
+        if (complete) {
+            debuggerLog("User has hit objective!" + complete);
+        }
     });
 }
 
@@ -408,7 +415,7 @@ function hitEndGame(callback){
 
     var endMessage = gameArea.variables['endMessage'];
 
-    console.log("Death message: " + endMessage);
+    debuggerLog("Death message: " + endMessage);
 
     var end = gameArea.data['end'];
 
@@ -450,7 +457,7 @@ function hitEndGame(callback){
     }
 
     typeOut(endMessage,x,y, size, width, text['color'],function(){
-        console.log("Game is completely over, The next key tap will reload the page.");
+        debuggerLog("Game is completely over, The next key tap will reload the game.");
 
         gameArea.canvas.getContext("2d").font = "40px main";
 
@@ -478,8 +485,9 @@ function hitEndGame(callback){
 function transition(){
 
     clearScreen();
+    debuggerLog("Drawing Frame #" + gameArea.currentFrame);
     createFrame(function(){
-        console.log("Screen has been drawn. Frame #" + gameArea.currentFrame);
+        debuggerLog("Finished drawing Frame #" + gameArea.currentFrame);
         listenKeyDown();
     });
 }
@@ -498,8 +506,14 @@ function clearScreen(){
 $(window).on('load', function(){
     $.ajaxSetup({ cache: false });
 
+    var debug = getUrlParam('debug', false)
+
+    if(debug){
+        $('#debug').show();
+    }
+
     if (window.innerHeight <= 899 || window.innerWidth <= 899){
-        console.log("Screen height is too small! The user needs to zoom out!");
+        debuggerLog("Screen height is too small! The user needs to zoom out!");
         alert("Your screen size is too small, If you are on a mobile device you need to view this on a computer. " +
             "If you are on a computer you need to zoom out. You can do this by doing (CMD & -) or (CTRL & -). Once you have zoomed out, Just reload the page! (900x900) Screen size min!");
     } else {
@@ -513,7 +527,7 @@ $(window).on('load', function(){
 });
 
 $(window).resize(function() {
-    console.log("Resizing the screen will effect the game, a reload may be required!");
+    debuggerLog("Resizing the screen will effect the game, a reload may be required!");
 });
 
 function showStartScreen(){
@@ -523,7 +537,7 @@ function showStartScreen(){
         gameArea.variables = gameArea.data['variables'];
         gameArea.objectives = gameArea.data['objectives'];
         gameArea.variable_icons = gameArea.data['variable_icons'];
-        console.log("Loaded game data, The game is ready to start when the user presses any key!");
+        debuggerLog("Loaded game data, The game is ready to start when the user presses any key!");
 
         var ctx = gameArea.canvas.getContext("2d");
 
@@ -545,7 +559,7 @@ function showStartScreen(){
 
         }();
 
-        img.src = gameArea.data['start']['url'];
+        img.src = gameArea.data['start']['url'] + '?cacheControlID='+gameArea.uuid;
 
         var handler = function (e) {
             startGame();
@@ -572,7 +586,7 @@ function listenKeyDown() {
             keyPressed = 'all';
         }
 
-        console.log(keyPressed + " has been pressed!");
+        debuggerLog(keyPressed + " has been pressed!");
 
         if (!varUndefined(nextFrame)){
 
@@ -581,7 +595,7 @@ function listenKeyDown() {
 
             if (nextFrame == "end") {
                 hitEndGame(function(){
-                    console.log('Game has hit the end.');
+                    debuggerLog('Game has hit the end.');
                 });
                 return;
             }
@@ -741,20 +755,47 @@ function preloadAllFrameData(callback) {
                     ctx.fillText("TEST",0,0);
                     complete++;
 
-                    console.log("Loaded: " + complete + "/" + count);
+                    debuggerLog("Loaded: " + complete + "/" + count);
 
                     if (complete == count) {
-                        console.log('All images have been loaded');
+                        debuggerLog('All images have been loaded');
                         callback(true);
                     }
                 }
 
             }();
 
+            url = url + '?cacheControlID='+gameArea.uuid;
             imgs[imgIndex].src = 'frames/' + url;
 
             imgIndex += 1;
         }
 
     });
+}
+
+function uuidv4() {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+        return v.toString(16);
+    });
+}
+var textLog = "";
+function downloadLog(){
+    window.location = 'data:application/octet-stream;charset=utf-8;base64,' + btoa(textLog);
+}
+function clearLog(){
+    $('#debugLog').empty();
+    textLog = "";
+}
+function debuggerLog(string){
+    console.log(string);
+
+    var today = new Date();
+    var stamp = "<p style='color:#1abc9c;float:left; display:inline;'>" + today.getHours()+':'+today.getMinutes()+':'+today.getSeconds() + "</p>";
+
+    textLog = textLog + "" + today.getHours()+':'+today.getMinutes()+':'+today.getSeconds()+"> " + string + " \n";
+
+    $('#debugLog').append("<span style='display: inline-block' >" + stamp + "<p style='color:#e67e22;float:left; display:inline;'>>&nbsp;</p><p style='color:#ecf0f1;float:left; display:inline;' > " + string + "</p></span><br>");
+    $('#debugLog').animate({scrollTop:10000000}, 'fast');
 }

@@ -2,9 +2,17 @@
     font-family: "main";
     src: url("main.ttf");
 }
+@font-face {
+    font-family: "console";
+    src: url("console.otf");
+}
 html, body, div, canvas {
     background: #bdc3c7;
     margin: 0 !important;
     padding: 0 !important;
     overflow: hidden !important;
+    font-family: "console";
+}
+p{
+    margin:0 !important;
 }
