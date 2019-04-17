@@ -6,10 +6,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0cd9c84a-c176-4dca-a43f-8a32e7533d1c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/frames/5fact.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frames/armyGuy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frames/farmerMirrored.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frames/heroinNeedle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frames/marketSign.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frames/poppy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frames/sadNeighbor.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Electron" beforeDir="false" afterPath="$PROJECT_DIR$/Electron" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Electron/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Electron/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frames/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/frames/list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frames/title.png" beforeDir="false" afterPath="$PROJECT_DIR$/frames/title.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/game.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/options.json" beforeDir="false" afterPath="$PROJECT_DIR$/options.json" afterDir="false" />
@@ -25,11 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="537" column="31" selection-start-line="537" selection-start-column="31" selection-end-line="537" selection-end-column="31" />
+            <state relative-caret-position="169">
+              <caret line="165" column="20" selection-start-line="165" selection-start-column="20" selection-end-line="165" selection-end-column="20" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -46,11 +53,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/options.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="980" column="19" lean-forward="true" selection-start-line="980" selection-start-column="19" selection-end-line="980" selection-end-column="19" />
+            <state relative-caret-position="355">
+              <caret line="820" column="17" lean-forward="true" selection-start-line="820" selection-start-column="17" selection-end-line="820" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -58,8 +65,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="420">
+              <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -90,17 +97,21 @@
       <find>gamePath</find>
       <find>log</find>
       <find>variab</find>
-      <find>draw</find>
       <find>Screen has</find>
       <find>x = window.innerWidth / 2;</find>
       <find>on</find>
       <find>game</find>
       <find>has been presse</find>
       <find>createFrame</find>
-      <find>end</find>
-      <find>5</find>
-      <find>&quot;5&quot;</find>
       <find>17</find>
+      <find>5</find>
+      <find>draw</find>
+      <find>&quot;7&quot;</find>
+      <find>&quot;2&quot;</find>
+      <find>&quot;5&quot;</find>
+      <find>end</find>
+      <find>&quot;10&quot;</find>
+      <find>image</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -125,8 +136,8 @@
         <option value="$PROJECT_DIR$/frames/list.php" />
         <option value="$PROJECT_DIR$/helper.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/game.js" />
         <option value="$PROJECT_DIR$/options.json" />
+        <option value="$PROJECT_DIR$/game.js" />
       </list>
     </option>
   </component>
@@ -154,6 +165,16 @@
             <path>
               <item name="IrrigationNation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="$PROJECT_DIR$" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="IrrigationNation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="$PROJECT_DIR$" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="Electron" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="IrrigationNation" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="$PROJECT_DIR$" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="frames" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -220,12 +241,12 @@
       <workItem from="1555474344478" duration="68000" />
       <workItem from="1555474429398" duration="676000" />
       <workItem from="1555475119414" duration="44000" />
-      <workItem from="1555475187431" duration="2263000" />
+      <workItem from="1555475187431" duration="13195000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101058000" />
+    <option name="totallyTimeSpent" value="111990000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -243,8 +264,8 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="File Transfer" order="9" visible="true" weight="0.32970297" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49946752" weight="0.32970297" />
+      <window_info anchor="bottom" id="File Transfer" order="9" weight="0.32970297" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49946752" visible="true" weight="0.32970297" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5005325" side_tool="true" weight="0.32970297" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -315,25 +336,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="537" column="31" selection-start-line="537" selection-start-column="31" selection-end-line="537" selection-end-column="31" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state relative-caret-position="420">
+          <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/options.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="980" column="19" lean-forward="true" selection-start-line="980" selection-start-column="19" selection-end-line="980" selection-end-column="19" />
+        <state relative-caret-position="355">
+          <caret line="820" column="17" lean-forward="true" selection-start-line="820" selection-start-column="17" selection-end-line="820" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="165" column="20" selection-start-line="165" selection-start-column="20" selection-end-line="165" selection-end-column="20" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

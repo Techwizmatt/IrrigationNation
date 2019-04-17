@@ -118,8 +118,8 @@ function drawImages(imagesArray, callback) {
         var imageData = imagesArray[image];
         var width = imageData['width'];
         var height = imageData['height'];
-        var x = (window.innerWidth / 2) + imageData['x'];
-        var y = (window.innerHeight / 2) + (imageData['y'] - height);
+        var x = imageData['x'];
+        var y = imageData['y'];
         var rotation = imageData['rotation'];
         var mirrorX = imageData['mirrorX'];
         var mirrorY = imageData['mirrorY'];
@@ -130,6 +130,7 @@ function drawImages(imagesArray, callback) {
 
         imgs[imgIndex].onload = function(){
 
+
             var thisX = x;
             var thisY = y;
             var thisWidth = width;
@@ -139,27 +140,59 @@ function drawImages(imagesArray, callback) {
             var thisMirrorY = mirrorY;
 
 
-
             return function(){
-                // ctx.save(); //SAVES ALL VALUES ON THE CANVAS TO THERE POSITION.
+                ctx.save(); //SAVES ALL VALUES ON THE CANVAS TO THERE POSITION.
 
-                // Work on rotation and mirroring later.
-                // if (mirrorX) {
-                //     ctx.setTransform(1,1,1,-1,x,y);
-                // }
-                // if (mirrorY) {
-                //     ctx.setTransform(1,1,1,-1,x,y);
-                // }
-                // if (rotation != 0) {
-                //     ctx.rotate(rotation);
-                // }
+                var autoWidth = this.width;
+                var autoHeight = this.height;
 
+                if (thisWidth == 'auto') {
+                    var setSide = thisWidth;
+                    var oppositeSide = thisHeight;
+                    var autoSetSide = autoWidth;
+                    var autoOppositeSide = autoHeight;
 
+                    if (setSide >= autoSetSide) {
+                        //    Great than
+                        var multiplier = oppositeSide / autoOppositeSide  ;
+                        setSide = autoSetSide * multiplier;
+                    } else {
+                        //    Less than
+                        var divisible = autoOppositeSide / oppositeSide;
+                        setSide = autoSetSide / divisible;
+                    }
 
+                    thisWidth = setSide;
+
+                } else if (thisHeight == 'auto') {
+                    var setSide = thisHeight;
+                    var oppositeSide = thisWidth;
+                    var autoSetSide = autoHeight;
+                    var autoOppositeSide = autoWidth;
+
+                    if (setSide >= autoSetSide) {
+                        //    Great than
+                        var multiplier = oppositeSide / autoOppositeSide  ;
+                        setSide = autoSetSide * multiplier;
+                    } else {
+                        //    Less than
+                        var divisible = autoOppositeSide / oppositeSide;
+                        setSide = autoSetSide / divisible;
+                    }
+
+                    thisHeight = setSide;
+
+                }
+
+                thisHeight = Math.floor(parseInt(thisHeight));
+                thisWidth = Math.floor(parseInt(thisWidth));
+
+                thisX = (window.innerWidth / 2) + thisX;
+                thisY = (window.innerHeight / 2) + thisY - thisHeight;
 
                 ctx.drawImage(this,thisX,thisY,thisWidth,thisHeight);
 
-                // ctx.restore(); //RESTORES ALL THE VALUES THAT WERE SAVED
+                ctx.restore(); //RESTORES ALL THE VALUES THAT WERE SAVED
 
             }
 
@@ -463,6 +496,7 @@ function clearScreen(){
 
 //Events \/
 $(window).on('load', function(){
+    $.ajaxSetup({ cache: false });
 
     if (window.innerHeight <= 899 || window.innerWidth <= 899){
         console.log("Screen height is too small! The user needs to zoom out!");
