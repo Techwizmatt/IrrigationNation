@@ -17,25 +17,25 @@
       "reward": {
         "A": {
           "id": 1,
-          "money": 400,
+          "money": 600,
           "family": 2,
           "efficiency": 0.25
         },
         "B": {
           "id": 2,
-          "money": 300,
+          "money": 500,
           "family": 3,
           "efficiency": 0.5
         },
         "C": {
           "id": 3,
-          "money": 200,
+          "money": 400,
           "family": 5,
           "efficiency": 0.75
         },
         "D": {
           "id": 4,
-          "money": 100,
+          "money": 300,
           "family": 7,
           "efficiency": 1
         }
@@ -413,7 +413,7 @@
           "money": 0
         },
         "B": {
-          "endMessage": "The Taliban kills you"
+          "endMessage": "Because you refused the Taliban, they kill you and take everything you own..."
         },
         "C": {
           "money": 0
@@ -542,18 +542,6 @@
         "B": "12"
       },
       "reward": {
-        "A": {
-          "money": 0
-        },
-        "B": {
-          "money": 0
-        },
-        "C": {
-          "money": 0
-        },
-        "D": {
-          "money": 0
-        }
       },
       "images": [
         {
@@ -592,18 +580,6 @@
         "D": "13"
       },
       "reward": {
-        "A": {
-          "money": 0
-        },
-        "B": {
-          "money": 0
-        },
-        "C": {
-          "money": 0
-        },
-        "D": {
-          "money": 0
-        }
       },
       "images": [
         {
@@ -713,24 +689,12 @@
         "D": "Cotton"
       },
       "path": {
-        "A": "0",
-        "B": "0",
-        "C": "0",
-        "D": "0"
+        "A": "10",
+        "B": "10",
+        "C": "10",
+        "D": "10"
       },
       "reward": {
-        "A": {
-          "money": 0
-        },
-        "B": {
-          "money": 0
-        },
-        "C": {
-          "money": 0
-        },
-        "D": {
-          "money": 0
-        }
       },
       "images": [
         {
@@ -763,24 +727,12 @@
         "D": "Ask your neighbor for help"
       },
       "path": {
-        "A": "0",
-        "B": "0",
+        "A": "8",
+        "B": "20",
         "C": "8",
         "D": "12"
       },
       "reward": {
-        "A": {
-          "money": 0
-        },
-        "B": {
-          "money": 0
-        },
-        "C": {
-          "money": 0
-        },
-        "D": {
-          "money": 0
-        }
       },
       "images": [
         {
@@ -819,17 +771,8 @@
         "D": "15"
       },
       "reward": {
-        "A": {
-          "money": 0
-        },
-        "B": {
-          "money": 0
-        },
         "C": {
           "endMessage": "Snitches get stitches, You have been killed"
-        },
-        "D": {
-          "money": 0
         }
       },
       "images": [
@@ -866,16 +809,7 @@
       },
       "reward": {
         "A": {
-          "money": 0
-        },
-        "B": {
-          "money": 0
-        },
-        "C": {
-          "money": 0
-        },
-        "D": {
-          "money": 0
+          "endMessage": "You have been out numbered and killed by the Taliban"
         }
       },
       "images": [
@@ -1011,22 +945,10 @@
       "path": {
         "A": "18",
         "B": "18",
-        "C": "17",
-        "D": "17"
+        "C": "31",
+        "D": "31"
       },
       "reward": {
-        "A": {
-          "money": 0
-        },
-        "B": {
-          "money": 0
-        },
-        "C": {
-          "money": 0
-        },
-        "D": {
-          "money": 0
-        }
       },
       "images": [
         {
@@ -2135,6 +2057,7 @@
   ],
   "variables": {
     "id": 0,
+    "endMessage": "",
     "family": 0,
     "food": 0,
     "efficiency": 0,
