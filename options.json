@@ -549,10 +549,10 @@
         "D": "Cotton"
       },
       "path": {
-        "A": "0",
-        "B": "0",
-        "C": "0",
-        "D": "0"
+        "A": "10",
+        "B": "10",
+        "C": "10",
+        "D": "10"
       },
       "reward": {
         "A": {
@@ -599,8 +599,8 @@
         "D": "Ask your neighbor for help"
       },
       "path": {
-        "A": "0",
-        "B": "0",
+        "A": "8",
+        "B": "20",
         "C": "8",
         "D": "12"
       },
@@ -691,7 +691,7 @@
       ]
     },
     "11": {
-      "question": "While you are growing poppy a wild tribe of Taliban come by and forcefully take all of your poppy! What do you do?",
+      "question": "The Taliban is going to take over your farm, What do you do?",
       "options": {
         "A": "Try to defend your farm.",
         "B": "Allow them to take your poppy and leave."
@@ -702,15 +702,9 @@
       },
       "reward": {
         "A": {
-          "money": 0
+          "endMessage": "You have been out numbered and killed by the Taliban"
         },
         "B": {
-          "money": 0
-        },
-        "C": {
-          "money": 0
-        },
-        "D": {
           "money": 0
         }
       },
@@ -795,10 +789,10 @@
         "D": "Grass hook"
       },
       "path": {
-        "A": "0",
-        "B": "0",
-        "C": "0",
-        "D": "0"
+        "A": "32",
+        "B": "32",
+        "C": "32",
+        "D": "32"
       },
       "reward": {
         "A": {
@@ -837,7 +831,7 @@
       ]
     },
     "14": {
-      "question": "How much do you want for hald of $food food you have?",
+      "question": "How od you want for half of $food food you have?",
       "options": {
         "A": "$1 for each food",
         "B": "$1.5 for each food",
@@ -847,8 +841,8 @@
       "path": {
         "A": "18",
         "B": "18",
-        "C": "17",
-        "D": "17"
+        "C": "31",
+        "D": "31"
       },
       "reward": {
         "A": {
@@ -979,28 +973,14 @@
       ]
     },
     "17": {
-      "question": "You have asked for too much, You have been denied access selling your crops. What do you want to do?",
+      "question": "A month passes growing poppy, The taliban has learned that you are becoming profitable and is displeased",
       "options": {
-        "A": "Unknown",
-        "B": "Unknown"
+        "all": "all"
       },
       "path": {
-        "A": "0",
-        "B": "0"
+        "all": "17"
       },
       "reward": {
-        "A": {
-          "money": 0
-        },
-        "B": {
-          "money": 0
-        },
-        "C": {
-          "money": 0
-        },
-        "D": {
-          "money": 0
-        }
       },
       "images": [
         {

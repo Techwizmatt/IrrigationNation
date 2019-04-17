@@ -81,14 +81,22 @@ function drawOptions(optionsArray, callback) {
         var x = 0;
         var y = 0;
 
+        var message = optionKey + "  : " + value;
+
         switch (optionKey){
             case "A": { x = (window.innerWidth / 2) - 300; y = (window.innerHeight) - 250; break;}
             case "B": { x = (window.innerWidth / 2) + 40; y = (window.innerHeight) - 250; break;}
             case "C": { x = (window.innerWidth / 2) - 300; y = (window.innerHeight) - 150; break;}
             case "D": { x = (window.innerWidth / 2) + 40; y = (window.innerHeight) - 150 ; break;}
+            case "all": {
+                message = "Press any key to continue...";
+                x = (window.innerWidth / 2) - (ctx.measureText(message).width / 2);
+                y = (window.innerHeight) - 100 ;
+                break;
+            }
         }
 
-        var optionLines = getLines(ctx,  optionKey + "  : " + value,300);
+        var optionLines = getLines(ctx,  message,300);
 
         for (var line in optionLines){
             fadeInText(ctx,optionLines[line],x,y + (line * gameArea.fontSize - 2), 255,255,255);
@@ -363,11 +371,11 @@ function completedObjective(callback){
 
 function hitEndGame(callback){
 
-    console.log(gameArea.currentFrame);
-
     clearScreen();
 
     var endMessage = gameArea.variables['endMessage'];
+
+    console.log("Death message: " + endMessage);
 
     var end = gameArea.data['end'];
 
@@ -425,12 +433,13 @@ function hitEndGame(callback){
 
         window.addEventListener('keydown', handler);
 
+        callback();
     });
 
 
     // ctx.fillText(endMessage,text['x'],text['y']);
 
-    callback();
+
 }
 
 function transition(){
@@ -518,15 +527,23 @@ function listenKeyDown() {
     var handler = function (e) {
 
         var frame = gameArea.data.frames[gameArea.currentFrame];
+        var options = frame['options'];
         var path = frame['path'];
-        var nextFrame = path[e.key.toUpperCase()];
+        var keyPressed = e.key.toUpperCase();
+        var nextFrame = path[keyPressed];
 
-        console.log(e.key.toUpperCase() + " has been pressed!");
+
+        if (!varUndefined(options['all'])) {
+            nextFrame = path['all'];
+            keyPressed = 'all';
+        }
+
+        console.log(keyPressed + " has been pressed!");
 
         if (!varUndefined(nextFrame)){
 
             window.removeEventListener('keydown', handler);
-            handleReward(e.key.toUpperCase());
+            handleReward(keyPressed);
 
             if (nextFrame == "end") {
                 hitEndGame(function(){
@@ -534,7 +551,6 @@ function listenKeyDown() {
                 });
                 return;
             }
-
 
             gameArea.currentFrame = nextFrame;
             transition();
@@ -663,7 +679,7 @@ function preloadAllFrameData(callback) {
     var imgs = [];
     var imgIndex = 0;
 
-    $.getJSON("https://techwizmatt.info/projects/school/eng/game/frames/list.php",{}, function(imagesArray){
+    $.getJSON("http://techwizmatt.info/projects/school/eng/game/frames/list.php",{}, function(imagesArray){
 
         var complete = 0;
         var count = Object.values(imagesArray).length - 1;
