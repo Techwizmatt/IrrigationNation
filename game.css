@@ -6,7 +6,7 @@
     font-family: "console";
     src: url("console.otf");
 }
-html, body, div, canvas {
+html, body, canvas {
     background: #bdc3c7;
     margin: 0 !important;
     padding: 0 !important;
