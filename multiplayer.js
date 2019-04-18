@@ -1,4 +1,4 @@
-var socket = io('http://24.251.100.87:234');
+var socket = io('http://techhost.co:234');
 
 var id = 0;
 var started = false;
