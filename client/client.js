@@ -125,8 +125,3 @@ function startTimer(time){
 
     }, 900);
 }
-
-
-//1 = connect
-//2 = sending selected option
-//3 = updating frame
