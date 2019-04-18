@@ -9,6 +9,10 @@
     <link href="game.css" rel="stylesheet" >
     <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+    <script src="other.js"></script>
+    <script src="socket.io.js"></script>
+    <script src="multiplayer.js"></script>
     <script src="game.js"></script>
     <script>
         if (window.module) module = window.module;
@@ -29,6 +33,14 @@
    </div>
     <div id="debugLog" style="position: absolute;bottom:0;left:0;right:0;top:45px; overflow: scroll !important; background: #000000;margin: 5px !important; margin-bottom: 5px !important; padding: 2px;">
     </div>
+</div>
+<div id="multiplayer" style="display: none; position: fixed; top:0; left:0; width: 240px; height: 300px; background: #45aaf2; border: 0; border-bottom-right-radius: 5px; color: white; " >
+    <div id="details">
+        <div id="timeLeft" style="width: calc(100% - 20px); height: 40px; margin: 10px; background:#4b7bec; border:0; border-radius: 5px;" ><div id="timeBar" style="background:#20bf6b; height: 40px; border:0; border-radius: 5px;" ></div></div>
+    </div>
+    <img id="joinQR" src="" style="position: absolute; bottom:10px; left: 8px;">
+</div>
+<div id="winningOption" style="display:none; position: fixed; bottom:10px; right:10px; width: 200px; height: 200px; background: #20bf6b; border: 0; border-radius: 5px; color: white; font-size: 100px; text-align: center; vertical-align: middle; line-height: 200px;">
 </div>
 </body>
 </html>
