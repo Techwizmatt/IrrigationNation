@@ -11,3 +11,5 @@ The main code is running inside the 'Game.js', the script or the scenarios that 
 Take a look at the code and enjoy playing around with it!
 
 (Don't judge for the crapping styling, I did not have a lot of time to make this project)
+
+Uggh, the file organization is terrible I know! My OCD is killing me !!! :( 
