@@ -46,7 +46,7 @@ function createFrame(callback){
                     drawOptions(frame['options'], function(){
 
                         //Multiplayer
-                        sendFrame(replaceAllStringVariables(frame['question']),frame['options'],10);
+                        sendFrame(replaceAllStringVariables(frame['question']),frame['options'], 15); 
 
                         callback(true);
                     });

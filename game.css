@@ -13,6 +13,9 @@ html, body, canvas {
     overflow: hidden !important;
     font-family: "console";
 }
+canvas{
+    cursor:none;
+}
 p{
     margin:0 !important;
 }

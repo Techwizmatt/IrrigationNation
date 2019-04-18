@@ -37,10 +37,6 @@ socket.on('option', function(data){
         }, 1200);
     })
 
-
-
-
-
 });
 
 socket.on('register', function(data){

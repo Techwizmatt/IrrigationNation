@@ -45,6 +45,15 @@ socket.on('frame', function(data){
             startTimer(data['time']);
 
         } else {
+            setTimeout(function(){
+                $('#other').html('<p>The story is about to continue, One moment...</p>');
+                $('#other').fadeIn("fast", function(){
+                    setTimeout(function(){
+
+                        $('#other').fadeOut("fast");
+                    }, 7000);
+                });
+            }, 3000);
             socket.emit('option', {"option":"*"});
         }
     }
