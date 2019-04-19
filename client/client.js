@@ -5,7 +5,7 @@ if (serverId == false) {
     die('ID IS NULL');
 }
 
-var socket = io('http://techhost.co:235',{ query: "id=" + serverId });
+var socket = io('http://techhost.co:235',{ query: "id=" + serverId }); 
 
 socket.on('connect', function(){
     console.log('Connected to Multiplayer IO server.');

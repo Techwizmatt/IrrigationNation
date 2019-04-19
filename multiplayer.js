@@ -72,7 +72,7 @@ function startTimer(time){
         passTime++
 
         if(passTime >= time){
-            clearInterval(repeat);
+            clearInterval(repeat); 
 
             setTimeout( function(){
                 $( "#timeBar" ).animate({

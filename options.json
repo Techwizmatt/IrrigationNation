@@ -40,122 +40,16 @@
           "efficiency": 1
         }
       },
-      "images": [
-        {
-          "url": "frames/tree.png",
-          "x": 100,
-          "y": -60,
-          "width": 150,
-          "height": 200,
-          "rotation": 180,
-          "mirrorX": false,
-          "mirrorY": true
-        },
-        {
-          "url": "frames/cloud.png",
-          "x": -220,
-          "y": -300,
-          "width": 100,
-          "height": 60,
-          "rotation": 180,
-          "mirrorX": false,
-          "mirrorY": true
-        },
-        {
-          "url": "frames/cloud.png",
-          "x": 0,
-          "y": -280,
-          "width": 100,
-          "height": 60,
-          "rotation": 180,
-          "mirrorX": false,
-          "mirrorY": true
-        },
-        {
-          "url": "frames/cloud.png",
-          "x": 210,
-          "y": -363,
-          "width": 100,
-          "height": 60,
-          "rotation": 180,
-          "mirrorX": false,
-          "mirrorY": true
-        },
-        {
-          "url": "frames/cloud.png",
-          "x": -100,
-          "y": -350,
-          "width": 100,
-          "height": 60,
-          "rotation": 180,
-          "mirrorX": false,
-          "mirrorY": true
-        },
-        {
-          "url": "frames/tree.png",
-          "x": -400,
-          "y": 20,
-          "width": 150,
-          "height": 200,
-          "rotation": 180,
-          "mirrorX": false,
-          "mirrorY": true
-        },
-        {
-          "url": "frames/tree.png",
-          "x": -280,
-          "y": -90,
-          "width": 150,
-          "height": 200,
-          "rotation": 180,
-          "mirrorX": false,
-          "mirrorY": true
-        },
-        {
-          "url": "frames/house.png",
-          "x": 200,
-          "y": 0,
-          "width": 200,
-          "height": 180,
-          "rotation": 180,
-          "mirrorX": false,
-          "mirrorY": true
-        },
-        {
-          "url": "frames/farmer-fork.png",
-          "x": 80,
-          "y": 10,
-          "width": 100,
-          "height": 100,
-          "rotation": 180,
-          "mirrorX": false,
-          "mirrorY": true
-        }
-      ],
-      "backgrounds": [
-        {
-          "color": "#3498db",
-          "x": "left",
-          "y": "center",
-          "width": "100%",
-          "height": "100%"
-        },
-        {
-          "color": "#2ecc71",
-          "x": "left",
-          "y": "center",
-          "width": "100%",
-          "height": "180"
-        }
-      ]
+      "images": [],
+      "backgrounds": []
     },
     "2": {
-      "question": "Remember you're a farmer, You need to grow crops... What do you want to grow?",
+      "question": "You are a farmer which crop do you want to grow? ",
       "options": {
-        "A": "Corn",
-        "B": "Wheat",
-        "C": "Rice",
-        "D": "Cotton"
+        "A": "Corn (+75 food -75 money)",
+        "B": "Wheat (+100 food -100 money)",
+        "C": "Rice (+25 food -25 money)",
+        "D": "Cotton (+50 food -50 money)"
       },
       "path": {
         "A": "3",
@@ -166,56 +60,37 @@
       "reward": {
         "A": {
           "money": -75,
-          "food": "75 * $efficiency"
+          "food": 75
         },
         "B": {
           "money": -100,
-          "food": "100 * $efficiency"
+          "food": 100
         },
         "C": {
           "money": -25,
-          "food": "25 * $efficiency"
+          "food": 25
         },
         "D": {
           "money": -50,
-          "food": "50 * $efficiency"
+          "food": 50
         }
       },
-      "images": [
-        {
-          "url": "frames/plants.png",
-          "x": -560,
-          "y": 0,
-          "width": 1000,
-          "height": "auto",
-          "rotation": 0,
-          "mirrorX": false,
-          "mirrorY": false
-        }
-      ],
-      "backgrounds": [
-        {
-          "color": "#9b59b6",
-          "x": "left",
-          "y": "top",
-          "width": "100%",
-          "height": "100%"
-        }
-      ]
+      "images": [],
+      "backgrounds": []
     },
     "3": {
-      "question": "You need to buy tools to grow your crops, Which tool do you want?",
+      "question": "You need to buy tools to grow your crops, Which tools do you want?",
       "options": {
-        "A": "Hoe",
-        "B": "Shovel",
-        "C": "Pitch fork",
-        "D": "Grass hook"
+        "A": "Hoe (+1 efficiency -100 money)",
+        "B": "Shovel (+0.75 efficiency -75 money)",
+        "C": "Pitch fork (+0.25 efficiency -25 money)",
+        "D": "Grass hook (+0.50 efficiency -50 money)"
       },
       "path": {
-        "A": "4",
-        "B": "4",
-        "C": "4",
-        "D": "4"
+        "A": "42",
+        "B": "42",
+        "C": "42",
+        "D": "42"
       },
       "reward": {
         "A": {
@@ -232,33 +107,14 @@
         },
         "D": {
           "money": -50,
-          "efficiency": 0.5
+          "efficiency": 0.50
         }
       },
-      "images": [
-        {
-          "url": "frames/tools.png",
-          "x": -480,
-          "y": 0,
-          "width": 800,
-          "height": "auto",
-          "rotation": 0,
-          "mirrorX": false,
-          "mirrorY": false
-        }
-      ],
-      "backgrounds": [
-        {
-          "color": "#2ecc71",
-          "x": "left",
-          "y": "top",
-          "width": "100%",
-          "height": "100%"
-        }
-      ]
+      "images": [],
+      "backgrounds": []
     },
     "4": {
-      "question": "2 months have past and your farm is fully grown, your neighbor is starving... What do you do?",
+      "question": "Your neighbors family has no food.",
       "options": {
         "A": "Sell crops",
         "B": "Give some crops to starving neighbor",
@@ -266,124 +122,28 @@
         "D": "Change crop"
       },
       "path": {
-        "A": "5",
+        "A": "43",
         "B": "9",
-        "C": "7",
+        "C": "44",
         "D": "8"
       },
       "reward": {
+        "A": {
+          "money": "$food * 0.8 * $efficiency",
+          "food": "-$food * 0.8"
+        },
+        "B": {
+          "food": "-$food * 0.5"
+        },
+        "C": {
+          "food": "$food * 0.8"
+        }
       },
-      "images": [
-        {
-          "url": "frames/tree.png",
-          "x": 100,
-          "y": -60,
-          "width": 150,
-          "height": 200,
-          "rotation": 180,
-          "mirrorX": false,
-          "mirrorY": true
-        },
-        {
-          "url": "frames/cloud.png",
-          "x": -220,
-          "y": -300,
-          "width": 100,
-          "height": 60,
-          "rotation": 180,
-          "mirrorX": false,
-          "mirrorY": true
-        },
-        {
-          "url": "frames/cloud.png",
-          "x": 0,
-          "y": -280,
-          "width": 100,
-          "height": 60,
-          "rotation": 180,
-          "mirrorX": false,
-          "mirrorY": true
-        },
-        {
-          "url": "frames/cloud.png",
-          "x": 210,
-          "y": -363,
-          "width": 100,
-          "height": 60,
-          "rotation": 180,
-          "mirrorX": false,
-          "mirrorY": true
-        },
-        {
-          "url": "frames/cloud.png",
-          "x": -100,
-          "y": -350,
-          "width": 100,
-          "height": 60,
-          "rotation": 180,
-          "mirrorX": false,
-          "mirrorY": true
-        },
-        {
-          "url": "frames/tree.png",
-          "x": -400,
-          "y": 20,
-          "width": 150,
-          "height": 200,
-          "rotation": 180,
-          "mirrorX": false,
-          "mirrorY": true
-        },
-        {
-          "url": "frames/tree.png",
-          "x": -280,
-          "y": -90,
-          "width": 150,
-          "height": 200,
-          "rotation": 180,
-          "mirrorX": false,
-          "mirrorY": true
-        },
-        {
-          "url": "frames/house.png",
-          "x": 200,
-          "y": 0,
-          "width": 200,
-          "height": 180,
-          "rotation": 180,
-          "mirrorX": false,
-          "mirrorY": true
-        },
-        {
-          "url": "frames/farmer-fork.png",
-          "x": 80,
-          "y": 10,
-          "width": 100,
-          "height": 100,
-          "rotation": 180,
-          "mirrorX": false,
-          "mirrorY": true
-        }
-      ],
-      "backgrounds": [
-        {
-          "color": "#3498db",
-          "x": "left",
-          "y": "center",
-          "width": "100%",
-          "height": "100%"
-        },
-        {
-          "color": "#2ecc71",
-          "x": "left",
-          "y": "center",
-          "width": "100%",
-          "height": "180"
-        }
-      ]
+      "images": [],
+      "backgrounds": []
     },
     "5": {
-      "question": "The taliban leader comes because he heard you have money and wants it...",
+      "question": "A Taliban member has stopped you because he heard you have money and wants to take it.",
       "options": {
         "A": "Give him food",
         "B": "Refuse him",
@@ -397,121 +157,21 @@
         "D": "10"
       },
       "reward": {
+        "A": {
+          "food": "-$food * 0.2"
+        },
         "B": {
-          "endMessage": "Because you refused the Taliban, they kill you and take everything you own..."
+          "endMessage": "The Taliban member kills you..."
+        },
+        "D": {
+          "money": "-$money * 0.2"
         }
       },
-      "images": [
-        {
-          "url": "frames/tree.png",
-          "x": 130,
-          "y": -90,
-          "width": 100,
-          "height": 150,
-          "rotation": 180,
-          "mirrorX": false,
-          "mirrorY": false
-        },
-        {
-          "url": "frames/tree.png",
-          "x": -200,
-          "y": -80,
-          "width": 75,
-          "height": 125,
-          "rotation": 180,
-          "mirrorX": false,
-          "mirrorY": true
-        },
-        {
-          "url": "frames/cloud.png",
-          "x": -220,
-          "y": -300,
-          "width": 100,
-          "height": 60,
-          "rotation": 180,
-          "mirrorX": false,
-          "mirrorY": true
-        },
-        {
-          "url": "frames/cloud.png",
-          "x": 0,
-          "y": -280,
-          "width": 100,
-          "height": 60,
-          "rotation": 180,
-          "mirrorX": false,
-          "mirrorY": true
-        },
-        {
-          "url": "frames/cloud.png",
-          "x": 210,
-          "y": -363,
-          "width": 100,
-          "height": 60,
-          "rotation": 180,
-          "mirrorX": false,
-          "mirrorY": true
-        },
-        {
-          "url": "frames/cloud.png",
-          "x": -100,
-          "y": -350,
-          "width": 100,
-          "height": 60,
-          "rotation": 180,
-          "mirrorX": false,
-          "mirrorY": true
-        },
-        {
-          "url": "frames/5fact.png",
-          "x": -300,
-          "y": 100,
-          "width": 380,
-          "height": "auto",
-          "rotation": 180,
-          "mirrorX": false,
-          "mirrorY": true
-        },
-        {
-          "url": "frames/farmerMirrored.png",
-          "x": -80,
-          "y": 10,
-          "width": 130,
-          "height": 120,
-          "rotation": 180,
-          "mirrorX": false,
-          "mirrorY": true
-        },
-        {
-          "url": "frames/armyGuy.png",
-          "x": 80,
-          "y": 10,
-          "width": 80,
-          "height": 120,
-          "rotation": 180,
-          "mirrorX": false,
-          "mirrorY": true
-        }
-      ],
-      "backgrounds": [
-        {
-          "color": "#3498db",
-          "x": "left",
-          "y": "center",
-          "width": "100%",
-          "height": "100%"
-        },
-        {
-          "color": "#2ecc71",
-          "x": "left",
-          "y": "center",
-          "width": "100%",
-          "height": "180"
-        }
-      ]
+      "images": [],
+      "backgrounds": []
     },
     "6": {
-      "question": "The authorities have bigger problems and can't help. What do you want to do now?",
+      "question": "The authorities have much bigger problems and can't help.",
       "options": {
         "A": "Run back to the farm",
         "B": "Ask your neighbor for help"
@@ -520,185 +180,70 @@
         "A": "9",
         "B": "12"
       },
-      "reward": {
-      },
-      "images": [
-        {
-          "url": "",
-          "x": 0,
-          "y": 0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "mirrorX": false,
-          "mirrorY": false
-        }
-      ],
-      "backgrounds": [
-        {
-          "color": "#3498db",
-          "x": "left",
-          "y": "top",
-          "width": "100%",
-          "height": "100%"
-        }
-      ]
+      "reward": {},
+      "images": [],
+      "backgrounds": []
     },
     "7": {
-      "question": "You've grown all the crops you can handle. What do you want to do?",
+      "question": "All of your crops have been harvest and you have a nice yield.",
       "options": {
         "A": "Sell crops",
         "B": "Don't sell crops",
         "C": "Haggle sale price",
-        "D": "Buy better tools"
+        "D": "Buy more tools"
       },
       "path": {
-        "A": "5",
+        "A": "43",
         "B": "18",
         "C": "14",
         "D": "13"
       },
       "reward": {
+        "A": {
+          "money": "$food * 0.8 * $efficiency",
+          "food": "-$food * 0.8"
+        }
       },
-      "images": [
-        {
-          "url": "frames/tree.png",
-          "x": 80,
-          "y": -30,
-          "width": 200,
-          "height": 300,
-          "rotation": 180,
-          "mirrorX": false,
-          "mirrorY": false
-        },
-        {
-          "url": "frames/cloud.png",
-          "x": -220,
-          "y": -300,
-          "width": 100,
-          "height": 60,
-          "rotation": 180,
-          "mirrorX": false,
-          "mirrorY": true
-        },
-        {
-          "url": "frames/cloud.png",
-          "x": 0,
-          "y": -280,
-          "width": 100,
-          "height": 60,
-          "rotation": 180,
-          "mirrorX": false,
-          "mirrorY": true
-        },
-        {
-          "url": "frames/cloud.png",
-          "x": 210,
-          "y": -363,
-          "width": 100,
-          "height": 60,
-          "rotation": 180,
-          "mirrorX": false,
-          "mirrorY": true
-        },
-        {
-          "url": "frames/cloud.png",
-          "x": -100,
-          "y": -350,
-          "width": 100,
-          "height": 60,
-          "rotation": 180,
-          "mirrorX": false,
-          "mirrorY": true
-        },
-        {
-          "url": "frames/farmerMirrored.png",
-          "x": -80,
-          "y": 10,
-          "width": 130,
-          "height": 120,
-          "rotation": 180,
-          "mirrorX": false,
-          "mirrorY": true
-        },
-        {
-          "url": "frames/house.png",
-          "x": 200,
-          "y": 0,
-          "width": "auto",
-          "height": 180,
-          "rotation": 180,
-          "mirrorX": false,
-          "mirrorY": true
-        },
-        {
-          "url": "frames/marketSign.png",
-          "x": 230,
-          "y": -100,
-          "width": 120,
-          "height": "auto",
-          "rotation": 180,
-          "mirrorX": false,
-          "mirrorY": false
-        }
-      ],
-      "backgrounds": [
-        {
-          "color": "#3498db",
-          "x": "left",
-          "y": "center",
-          "width": "100%",
-          "height": "100%"
-        },
-        {
-          "color": "#2ecc71",
-          "x": "left",
-          "y": "center",
-          "width": "100%",
-          "height": "180"
-        }
-      ]
+      "images": [],
+      "backgrounds": []
     },
     "8": {
       "question": "What crops would you like to buy?",
       "options": {
-        "A": "Corn",
-        "B": "Wheat",
-        "C": "Rice",
-        "D": "Cotton"
+        "A": "Corn (+75 food -75 money)",
+        "B": "Wheat (+100 food -100 money)",
+        "C": "Rice (+25 food -25 money)",
+        "D": "Cotton (+50 food -50 money)"
       },
       "path": {
-        "A": "10",
-        "B": "10",
-        "C": "10",
-        "D": "10"
+        "A": "45",
+        "B": "45",
+        "C": "45",
+        "D": "45"
       },
       "reward": {
+        "A": {
+          "money": -75,
+          "food": 75
+        },
+        "B": {
+          "money": -100,
+          "food": 100
+        },
+        "C": {
+          "money": -25,
+          "food": 25
+        },
+        "D": {
+          "money": -50,
+          "food": 50
+        }
       },
-      "images": [
-        {
-          "url": "frames/plants.png",
-          "x": -580,
-          "y": 0,
-          "width": 1000,
-          "height": 400,
-          "rotation": 0,
-          "mirrorX": false,
-          "mirrorY": false
-        }
-      ],
-      "backgrounds": [
-        {
-          "color": "#3498db",
-          "x": "left",
-          "y": "top",
-          "width": "100%",
-          "height": "100%"
-        }
-      ]
+      "images": [],
+      "backgrounds": []
     },
     "9": {
-      "question": "One week passes and you have $food food, What do you do?",
+      "question": "A week has passed, You currently have $food food",
       "options": {
         "A": "Buy food",
         "B": "Ration with your family",
@@ -712,75 +257,43 @@
         "D": "12"
       },
       "reward": {
+        "B": {
+          "food": "-$food * 0.3"
+        }
       },
-      "images": [
-        {
-          "url": "",
-          "x": 0,
-          "y": 0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "mirrorX": false,
-          "mirrorY": false
-        }
-      ],
-      "backgrounds": [
-        {
-          "color": "#3498db",
-          "x": "left",
-          "y": "top",
-          "width": "100%",
-          "height": "100%"
-        }
-      ]
+      "images": [],
+      "backgrounds": []
     },
     "10": {
-      "question": "You have been offered high-risk high-reward crop to grow poppy. Do you want to grow it?",
+      "question": "You have been offered a high-risk but high-reward crop called poppy, Do you want to grow it?",
       "options": {
-        "A": "Grow the poppy!",
-        "B": "No, I do not want to grow poppy.",
-        "C": "Report to the government that you've been offered to grow poppy.",
-        "D": "Learn more about what poppy is."
+        "A": "Grow the poppy",
+        "B": "No, I do not want to grow poppy",
+        "C": "Report to the authorities who offered to sell you poppy",
+        "D": "Learn more about what poppy is"
       },
       "path": {
-        "A": "11",
-        "B": "18",
+        "A": "17",
+        "B": "46",
         "C": "end",
         "D": "15"
       },
       "reward": {
+        "A": {
+          "money": "150 * $efficiency"
+        },
         "C": {
-          "endMessage": "Snitches get stitches, You have been killed"
+          "endMessage": "Snitches get stitches, You have been killed."
         }
       },
-      "images": [
-        {
-          "url": "",
-          "x": 0,
-          "y": 0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "mirrorX": false,
-          "mirrorY": false
-        }
-      ],
-      "backgrounds": [
-        {
-          "color": "#3498db",
-          "x": "left",
-          "y": "top",
-          "width": "100%",
-          "height": "100%"
-        }
-      ]
+      "images": [],
+      "backgrounds": []
     },
     "11": {
-      "question": "The Taliban is going to take over your farm, What do you do?",
+      "question": "The Taliban is going to take over your farm, Think fast!",
       "options": {
-        "A": "Try to defend your farm.",
-        "B": "Allow them to take your poppy and leave."
+        "A": "Try to defend your farm",
+        "B": "Allow them to take your poppy and leave"
       },
       "path": {
         "A": "end",
@@ -788,113 +301,77 @@
       },
       "reward": {
         "A": {
-          "endMessage": "You have been out numbered and killed by the Taliban"
+          "endMessage": "You have been out numbered and have been gunned down by the group of Taliban members..."
+        },
+        "B": {
+          "money": "-$money * 0.5",
+          "food": "-$food * 0.5"
         }
       },
-      "images": [
-        {
-          "url": "",
-          "x": 0,
-          "y": 0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "mirrorX": false,
-          "mirrorY": false
-        }
-      ],
-      "backgrounds": [
-        {
-          "color": "#3498db",
-          "x": "left",
-          "y": "top",
-          "width": "100%",
-          "height": "100%"
-        }
-      ]
+      "images": [],
+      "backgrounds": [],
+      "time": 7
     },
     "12": {
-      "question": "Your neighbor can't do much. What do you want to do now?",
+      "question": "Your neighbor can't afford to give you any food or money",
       "options": {
-        "A": "A few weeks have gone by, Find help",
-        "B": "Try to steal from neighbor and take some of his food"
+        "A": "Find help",
+        "B": "Try to steal from your neighbor and take some of his food."
       },
       "path": {
-        "A": "20",
+        "A": "48",
         "B": "end"
       },
       "reward": {
         "B": {
-          "endMessage": "Your neighbor saw you stealing and shoots you dead"
+          "endMessage": "Your neighbor has caught you stealing and shoots you dead in his house."
         }
       },
-      "images": [
-        {
-          "url": "",
-          "x": 0,
-          "y": 0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "mirrorX": false,
-          "mirrorY": false
-        }
-      ],
-      "backgrounds": [
-        {
-          "color": "#3498db",
-          "x": "left",
-          "y": "top",
-          "width": "100%",
-          "height": "100%"
-        }
-      ]
+      "images": [],
+      "backgrounds": []
     },
     "13": {
       "question": "What tools do you want to buy?",
       "options": {
-        "A": "Hoe",
-        "B": "Shovel",
-        "C": "Pitch fork",
-        "D": "Grass hook"
+        "A": "Hoe (+1 efficiency -100 money)",
+        "B": "Shovel (+0.75 efficiency -75 money)",
+        "C": "Pitch fork (+0.25 efficiency -25 money)",
+        "D": "Grass hook (+0.50 efficiency -50 money)"
       },
       "path": {
-        "A": "0",
-        "B": "0",
-        "C": "0",
-        "D": "0"
+        "A": "32",
+        "B": "32",
+        "C": "32",
+        "D": "32"
       },
       "reward": {
+        "A": {
+          "money": -100,
+          "efficiency": 1
+        },
+        "B": {
+          "money": -75,
+          "efficiency": 0.75
+        },
+        "C": {
+          "money": -25,
+          "efficiency": 0.25
+        },
+        "D": {
+          "money": -50,
+          "efficiency": 0.50
+        }
       },
-      "images": [
-        {
-          "url": "frames/tools.png",
-          "x": -580,
-          "y": 0,
-          "width": 1000,
-          "height": 400,
-          "rotation": 0,
-          "mirrorX": false,
-          "mirrorY": false
-        }
-      ],
-      "backgrounds": [
-        {
-          "color": "#2ecc71",
-          "x": "left",
-          "y": "top",
-          "width": "100%",
-          "height": "100%"
-        }
-      ]
+      "images": [],
+      "backgrounds": []
     },
     "14": {
       "question": "How much do you want for half of $food food you have?",
       "options": {
         "A": "$1 for each food",
-        "B": "$1.5 for each food",
+        "B": "$1.50 for each food",
         "C": "$2 for each food",
-        "D": "$2.5 for each food"
+        "D": "$2.50 for each food"
       },
       "path": {
         "A": "18",
@@ -903,134 +380,68 @@
         "D": "31"
       },
       "reward": {
+        "A": {
+          "money": "($food / 2) * 1",
+          "food": "-$food / 2"
+        },
+        "B": {
+          "money": "($food / 2) * 1.5",
+          "food": "-$food / 2"
+        }
       },
-      "images": [
-        {
-          "url": "",
-          "x": 0,
-          "y": 0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "mirrorX": false,
-          "mirrorY": false
-        }
-      ],
-      "backgrounds": [
-        {
-          "color": "#3498db",
-          "x": "left",
-          "y": "top",
-          "width": "100%",
-          "height": "100%"
-        }
-      ]
+      "images": [],
+      "backgrounds": []
     },
     "15": {
-      "question": "Poppy is used to make heroin, Do you still want to grow it?",
+      "question": "Poppy is used to make opiates, which is highly addictive. Do you still want to grow it?",
       "options": {
-        "A": "Yes, Lets grow poppy I need money to provide for my family!",
+        "A": "Yes",
         "B": "No"
       },
       "path": {
-        "A": "11",
-        "B": "18"
+        "A": "17",
+        "B": "47"
       },
       "reward": {
+        "A": {
+          "money": "150 * $efficiency"
+        }
       },
-      "images": [
-        {
-          "url": "",
-          "x": 0,
-          "y": 0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "mirrorX": false,
-          "mirrorY": false
-        }
-      ],
-      "backgrounds": [
-        {
-          "color": "#3498db",
-          "x": "left",
-          "y": "top",
-          "width": "100%",
-          "height": "100%"
-        }
-      ]
+      "images": [],
+      "backgrounds": []
     },
     "16": {
-      "question": "You started growing poppy and it's all gone now. What are you going to do?",
+      "question": "Because you started growing poppy and it's now all gone, What are you going to do?",
       "options": {
         "A": "Grow different crops",
-        "B": "Try to survive with the rations you have left"
+        "B": "Try to survive with the rations you have left in store from earlier"
       },
       "path": {
         "A": "8",
         "B": "9"
       },
-      "reward": {
-      },
-      "images": [
-        {
-          "url": "",
-          "x": 0,
-          "y": 0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "mirrorX": false,
-          "mirrorY": false
-        }
-      ],
-      "backgrounds": [
-        {
-          "color": "#3498db",
-          "x": "left",
-          "y": "top",
-          "width": "100%",
-          "height": "100%"
-        }
-      ]
+      "reward": {},
+      "images": [],
+      "backgrounds": []
     },
     "17": {
-      "question": "A month passes growing poppy, The Taliban has learned that you are becoming profitable and is displeased",
+      "question": "A month passes growing poppy, The Taliban has learned that you are becoming profitable and is displeased...",
       "options": {
         "all": "all"
       },
       "path": {
         "all": "11"
       },
-      "reward": {
-      },
-      "images": [
-        {
-          "url": "",
-          "x": 0,
-          "y": 0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "mirrorX": false,
-          "mirrorY": false
-        }
-      ],
-      "backgrounds": [
-        {
-          "color": "#3498db",
-          "x": "left",
-          "y": "top",
-          "width": "100%",
-          "height": "100%"
-        }
-      ]
+      "reward": {},
+      "images": [],
+      "backgrounds": [],
+      "time": 10
     },
     "18": {
-      "question": "Uh oh, You see a storm brewing... What do you do! ",
+      "question": "Uh oh, you see a storm brewing. Think fast!",
       "options": {
         "A": "Evacuate",
-        "B": "Harvest all crops immediately",
+        "B": "Harvest all crops. immediately",
         "C": "Prepare for the storm by securing your home",
         "D": "Do nothing"
       },
@@ -1042,40 +453,25 @@
       },
       "reward": {
         "A": {
-          "food": "- $food*0.9"
+          "food": "-$food * 0.9"
         },
         "B": {
           "food": "100 * $efficiency",
           "family": -1
         },
+        "C": {
+          "food": "-$food * 0.9"
+        },
         "D": {
-          "endMessage": "The storm causes a land slide from the mountain beside you and blows over your home and kills everyone"
+          "endMessage": "The storm causes a land slide from the mountain beside you and blows over your home and kills your entire family"
         }
       },
-      "images": [
-        {
-          "url": "",
-          "x": 0,
-          "y": 0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "mirrorX": false,
-          "mirrorY": false
-        }
-      ],
-      "backgrounds": [
-        {
-          "color": "#3498db",
-          "x": "left",
-          "y": "top",
-          "width": "100%",
-          "height": "100%"
-        }
-      ]
+      "images": [],
+      "backgrounds": [],
+      "time": 7
     },
     "19": {
-      "question": "Your whole family survives but all your crops are destroyed",
+      "question": "Your whole family survives but almost all your crops are destroyed!",
       "options": {
         "A": "Get more crops",
         "B": "Go to mysterious man ahead"
@@ -1084,32 +480,12 @@
         "A": "8",
         "B": "34"
       },
-      "reward": {
-      },
-      "images": [
-        {
-          "url": "",
-          "x": 0,
-          "y": 0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "mirrorX": false,
-          "mirrorY": false
-        }
-      ],
-      "backgrounds": [
-        {
-          "color": "#3498db",
-          "x": "left",
-          "y": "top",
-          "width": "100%",
-          "height": "100%"
-        }
-      ]
+      "reward": {},
+      "images": [],
+      "backgrounds": []
     },
     "20": {
-      "question": "You have found someone who can help, but it's gonna cost you labor. Do you take the job?",
+      "question": "Someone has offered you a side job, but it will cost you labor",
       "options": {
         "A": "Yes",
         "B": "No"
@@ -1118,36 +494,16 @@
         "A": "27",
         "B": "23"
       },
-      "reward": {
-      },
-      "images": [
-        {
-          "url": "",
-          "x": 0,
-          "y": 0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "mirrorX": false,
-          "mirrorY": false
-        }
-      ],
-      "backgrounds": [
-        {
-          "color": "#3498db",
-          "x": "left",
-          "y": "top",
-          "width": "100%",
-          "height": "100%"
-        }
-      ]
+      "reward": {},
+      "images": [],
+      "backgrounds": []
     },
     "21": {
-      "question": "The storm passes and all your crops were saved on time, but the during the storm you drank contaminated water causing you to get Cholera. What do you do for your family?",
+      "question": "The storm passes and all your crops were saved on time, but the only available water during the storm was contaminated and gave your family cholera. How are you going to survive this?",
       "options": {
-        "A": "Go find a doctor",
+        "A": "Go find a doctor (it's gonna cost you 50% of your money and 30% of your food!)",
         "B": "Care for them your self",
-        "C": "Tend to farm instead",
+        "C": "Tend to farm",
         "D": "Drink fluids and try to combat the cholera yourself"
       },
       "path": {
@@ -1157,65 +513,33 @@
         "D": "38"
       },
       "reward": {
+        "A": {
+          "food": "-$food * 0.3",
+          "money": "-$money * 0.5"
+        },
+        "B": {
+          "efficiency": -0.5
+        },
         "C": {
-          "endMessage": "While tending to your farm, half of your family dies from cholera"
+          "endMessage": "While tending to your farm your family has died..."
         }
       },
-      "images": [
-        {
-          "url": "",
-          "x": 0,
-          "y": 0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "mirrorX": false,
-          "mirrorY": false
-        }
-      ],
-      "backgrounds": [
-        {
-          "color": "#3498db",
-          "x": "left",
-          "y": "top",
-          "width": "100%",
-          "height": "100%"
-        }
-      ]
+      "images": [],
+      "backgrounds": []
     },
     "22": {
-      "question": "Your whole family survives but you have no food",
+      "question": "Your whole family survives but you have little to no food.",
       "options": {
         "A": "Find help",
-        "B": "Go back to your farm in hopes that your crops survived."
+        "B": "Go back to your farm"
       },
       "path": {
-        "A": "20",
-        "B": "24"
+        "A": "48",
+        "B": "51"
       },
-      "reward": {
-      },
-      "images": [
-        {
-          "url": "",
-          "x": 0,
-          "y": 0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "mirrorX": false,
-          "mirrorY": false
-        }
-      ],
-      "backgrounds": [
-        {
-          "color": "#3498db",
-          "x": "left",
-          "y": "top",
-          "width": "100%",
-          "height": "100%"
-        }
-      ]
+      "reward": {},
+      "images": [],
+      "backgrounds": []
     },
     "23": {
       "question": "There isn't many options for you, You decide to head back to your farm",
@@ -1223,38 +547,19 @@
         "all": "all"
       },
       "path": {
-        "all": "24"
+        "all": "51"
       },
-      "reward": {
-      },
-      "images": [
-        {
-          "url": "",
-          "x": 0,
-          "y": 0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "mirrorX": false,
-          "mirrorY": false
-        }
-      ],
-      "backgrounds": [
-        {
-          "color": "#3498db",
-          "x": "left",
-          "y": "top",
-          "width": "100%",
-          "height": "100%"
-        }
-      ]
+      "reward": {},
+      "images": [],
+      "backgrounds": [],
+      "time": 7
     },
     "24": {
-      "question": "You get to your farm and almost all your family drinks contaminated water causing cholera. What do you do?",
+      "question": "Your family has become very sick with Cholera due to unclean drinking water.",
       "options": {
-        "A": "Go find a doctor",
+        "A": "Go find a doctor (it's gonna cost you 50% of your money and 30% of your food!)",
         "B": "Care for them your self",
-        "C": "Tend to farm instead",
+        "C": "Tend to farm",
         "D": "Drink fluids and try to combat the cholera yourself"
       },
       "path": {
@@ -1264,598 +569,40 @@
         "D": "38"
       },
       "reward": {
+        "A": {
+          "food": "-$food * 0.3",
+          "money": "-$money * 0.5"
+        },
+        "B": {
+          "efficiency": -0.5
+        },
         "C": {
-          "endMessage": "While tending to your farm, half of your family dies from cholera"
+          "endMessage": "While tending to your farm your family has died..."
         }
       },
-      "images": [
-        {
-          "url": "",
-          "x": 0,
-          "y": 0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "mirrorX": false,
-          "mirrorY": false
-        }
-      ],
-      "backgrounds": [
-        {
-          "color": "#3498db",
-          "x": "left",
-          "y": "top",
-          "width": "100%",
-          "height": "100%"
-        }
-      ]
+      "images": [],
+      "backgrounds": []
     },
     "25": {
-      "question": "You get information on a doctors without borders shelter but it's 50 miles away, What do you do?",
+      "question": "The closest aid clinic is 50 miles away.",
       "options": {
-        "A": "Start heading to the doctor on foot",
-        "B": "Stay at the farm in hopes that you can cure the disease yourself"
+        "A": "Begin the journey to the aid clinic",
+        "B": "Stay on your farm and pray for the best"
       },
       "path": {
         "A": "35",
         "B": "26"
       },
       "reward": {
+        "A": {
+          "efficiency": ""
+        },
         "B": {
-          "family": "-$family * 0.33"
+          "efficiency": ""
         }
       },
-      "images": [
-        {
-          "url": "",
-          "x": 0,
-          "y": 0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "mirrorX": false,
-          "mirrorY": false
-        }
-      ],
-      "backgrounds": [
-        {
-          "color": "#3498db",
-          "x": "left",
-          "y": "top",
-          "width": "100%",
-          "height": "100%"
-        }
-      ]
-    },
-    "26": {
-      "question": "Your cholera has progressed. 1/3 of your family has died and you are running out of time, What do you do?",
-      "options": {
-        "A": "Drink fluids to try and combat the cholera",
-        "B": "Find a way to ease the pain"
-      },
-      "path": {
-        "A": "38",
-        "B": "end"
-      },
-      "reward": {
-        "B": {
-          "endMessage": "You have used opium to combat the pain, 2 weeks later and you have overdoes from your addiction"
-        }
-      },
-      "images": [
-        {
-          "url": "",
-          "x": 0,
-          "y": 0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "mirrorX": false,
-          "mirrorY": false
-        }
-      ],
-      "backgrounds": [
-        {
-          "color": "#3498db",
-          "x": "left",
-          "y": "top",
-          "width": "100%",
-          "height": "100%"
-        }
-      ]
-    },
-    "27": {
-      "question": "You have been given the job to harvest poppy for the Taliban, You won't make as much from growing it yourself but the risk is a lot lower",
-      "options": {
-        "all": "all"
-      },
-      "path": {
-        "all": "28"
-      },
-      "reward": {
-        "all": {
-          "money": "150 * $efficiency"
-        }
-      },
-      "images": [
-        {
-          "url": "",
-          "x": 0,
-          "y": 0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "mirrorX": false,
-          "mirrorY": false
-        }
-      ],
-      "backgrounds": [
-        {
-          "color": "#3498db",
-          "x": "left",
-          "y": "top",
-          "width": "100%",
-          "height": "100%"
-        }
-      ]
-    },
-    "28": {
-      "question": "A month has passed working for the Taliban, What do you do?",
-      "options": {
-        "A": "Grow poppy on your own farm",
-        "B": "Choose a crop of your own"
-      },
-      "path": {
-        "A": "17",
-        "B": "29"
-      },
-      "reward": {},
-      "images": [
-        {
-          "url": "",
-          "x": 0,
-          "y": 0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "mirrorX": false,
-          "mirrorY": false
-        }
-      ],
-      "backgrounds": [
-        {
-          "color": "#3498db",
-          "x": "left",
-          "y": "top",
-          "width": "100%",
-          "height": "100%"
-        }
-      ]
-    },
-    "29": {
-      "question": "What crops would you like to grow now?",
-      "options": {
-        "A": "Corn",
-        "B": "Wheat",
-        "C": "Rice",
-        "D": "Cotton"
-      },
-      "path": {
-        "A": "30",
-        "B": "30",
-        "C": "30",
-        "D": "30"
-      },
-      "reward": {},
-      "images": [
-        {
-          "url": "",
-          "x": 0,
-          "y": 0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "mirrorX": false,
-          "mirrorY": false
-        }
-      ],
-      "backgrounds": [
-        {
-          "color": "#3498db",
-          "x": "left",
-          "y": "top",
-          "width": "100%",
-          "height": "100%"
-        }
-      ]
-    },
-    "30": {
-      "question": "A month has passed growing some more crops, You've sold some of your crops and you are on your way home",
-      "options": {
-        "all": "all"
-      },
-      "path": {
-        "all": "24"
-      },
-      "reward": {},
-      "images": [
-        {
-          "url": "",
-          "x": 0,
-          "y": 0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "mirrorX": false,
-          "mirrorY": false
-        }
-      ],
-      "backgrounds": [
-        {
-          "color": "#3498db",
-          "x": "left",
-          "y": "top",
-          "width": "100%",
-          "height": "100%"
-        }
-      ]
-    },
-    "31": {
-      "question": "You bid is to high, So you decide to walk back to your farm",
-      "options": {
-        "all": "all"
-      },
-      "path": {
-        "all": "10"
-      },
-      "reward": {},
-      "images": [
-        {
-          "url": "",
-          "x": 0,
-          "y": 0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "mirrorX": false,
-          "mirrorY": false
-        }
-      ],
-      "backgrounds": [
-        {
-          "color": "#3498db",
-          "x": "left",
-          "y": "top",
-          "width": "100%",
-          "height": "100%"
-        }
-      ]
-    },
-    "32": {
-      "question": "All has gone well for you and your family, Lets hope it stays that way...",
-      "options": {
-        "all": "all"
-      },
-      "path": {
-        "all": "5"
-      },
-      "reward": {},
-      "images": [
-        {
-          "url": "",
-          "x": 0,
-          "y": 0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "mirrorX": false,
-          "mirrorY": false
-        }
-      ],
-      "backgrounds": [
-        {
-          "color": "#3498db",
-          "x": "left",
-          "y": "top",
-          "width": "100%",
-          "height": "100%"
-        }
-      ]
-    },
-    "33": {
-      "question": "While caring for your family you catch cholera yourself",
-      "options": {
-        "all": "all"
-      },
-      "path": {
-        "all": "26"
-      },
-      "reward": {
-        "family": "- $family * 0.33"
-      },
-      "images": [
-        {
-          "url": "",
-          "x": 0,
-          "y": 0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "mirrorX": false,
-          "mirrorY": false
-        }
-      ],
-      "backgrounds": [
-        {
-          "color": "#3498db",
-          "x": "left",
-          "y": "top",
-          "width": "100%",
-          "height": "100%"
-        }
-      ]
-    },
-    "34": {
-      "question": "The mystery man offers you a deal, Do you take it?",
-      "options": {
-        "A": "No",
-        "B": "Yes"
-      },
-      "path": {
-        "A": "9",
-        "B": "10"
-      },
-      "reward": {},
-      "images": [
-        {
-          "url": "",
-          "x": 0,
-          "y": 0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "mirrorX": false,
-          "mirrorY": false
-        }
-      ],
-      "backgrounds": [
-        {
-          "color": "#3498db",
-          "x": "left",
-          "y": "top",
-          "width": "100%",
-          "height": "100%"
-        }
-      ]
-    },
-    "35": {
-      "question": "A day has passed while walking to the doctors with out borders shelter, You have 20 miles to go...",
-      "options": {
-        "all": "all"
-      },
-      "path": {
-        "all": "36"
-      },
-      "reward": {},
-      "images": [
-        {
-          "url": "",
-          "x": 0,
-          "y": 0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "mirrorX": false,
-          "mirrorY": false
-        }
-      ],
-      "backgrounds": [
-        {
-          "color": "#3498db",
-          "x": "left",
-          "y": "top",
-          "width": "100%",
-          "height": "100%"
-        }
-      ]
-    },
-    "36": {
-      "question": "Your cholera has gotten progressively worse, What do you do?",
-      "options": {
-        "A": "Take a break",
-        "B": "Continue treking"
-      },
-      "path": {
-        "A": "37",
-        "B": "39"
-      },
-      "reward": {},
-      "images": [
-        {
-          "url": "",
-          "x": 0,
-          "y": 0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "mirrorX": false,
-          "mirrorY": false
-        }
-      ],
-      "backgrounds": [
-        {
-          "color": "#3498db",
-          "x": "left",
-          "y": "top",
-          "width": "100%",
-          "height": "100%"
-        }
-      ]
-    },
-    "37": {
-      "question": "You find a nice place to rest...",
-      "options": {
-        "all": "all"
-      },
-      "path": {
-        "all": "end"
-      },
-      "reward": {
-        "endMessage": "You have died in your sleep"
-      },
-      "images": [
-        {
-          "url": "",
-          "x": 0,
-          "y": 0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "mirrorX": false,
-          "mirrorY": false
-        }
-      ],
-      "backgrounds": [
-        {
-          "color": "#3498db",
-          "x": "left",
-          "y": "top",
-          "width": "100%",
-          "height": "100%"
-        }
-      ]
-    },
-    "38": {
-      "question": "It has been a long recovery, but after rehydration therapy with clean water you and your family start to feel better",
-      "options": {
-        "A": "Return to farming to provice for your family",
-        "B": "Hire someone to help you farm"
-      },
-      "path": {
-        "A": "win",
-        "B": "40"
-      },
-      "reward": {},
-      "images": [
-        {
-          "url": "",
-          "x": 0,
-          "y": 0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "mirrorX": false,
-          "mirrorY": false
-        }
-      ],
-      "backgrounds": [
-        {
-          "color": "#3498db",
-          "x": "left",
-          "y": "top",
-          "width": "100%",
-          "height": "100%"
-        }
-      ]
-    },
-    "39": {
-      "question": "You arrive to Doctors with out borders shelter, Your family has made it in time. Thanks to the charitable effects of Feed my starving children you have received some food for your family",
-      "options": {
-        "all": "all"
-      },
-      "path": {
-        "all": "41"
-      },
-      "reward": {
-        "food": "* 1.10"
-      },
-      "images": [
-        {
-          "url": "",
-          "x": 0,
-          "y": 0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "mirrorX": false,
-          "mirrorY": false
-        }
-      ],
-      "backgrounds": [
-        {
-          "color": "#3498db",
-          "x": "left",
-          "y": "top",
-          "width": "100%",
-          "height": "100%"
-        }
-      ]
-    },
-    "40": {
-      "question": "You have the largest crop yield of the year, You can sell this for a lot at the market",
-      "options": {
-        "A": "Store the food",
-        "B": "Sell the food"
-      },
-      "path": {
-        "A": "win",
-        "B": "win"
-      },
-      "reward": {},
-      "images": [
-        {
-          "url": "",
-          "x": 0,
-          "y": 0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "mirrorX": false,
-          "mirrorY": false
-        }
-      ],
-      "backgrounds": [
-        {
-          "color": "#3498db",
-          "x": "left",
-          "y": "top",
-          "width": "100%",
-          "height": "100%"
-        }
-      ]
-    },
-    "41": {
-      "question": "After a rough journey you have arrived home. What do you do?",
-      "options": {
-        "A": "Continue farming as a farmer and provide for your family",
-        "B": "Look for help to provide for your family"
-      },
-      "path": {
-        "A": "win",
-        "B": "win"
-      },
-      "reward": {},
-      "images": [
-        {
-          "url": "",
-          "x": 0,
-          "y": 0,
-          "width": 0,
-          "height": 0,
-          "rotation": 0,
-          "mirrorX": false,
-          "mirrorY": false
-        }
-      ],
-      "backgrounds": [
-        {
-          "color": "#3498db",
-          "x": "left",
-          "y": "top",
-          "width": "100%",
-          "height": "100%"
-        }
-      ]
+      "images": [],
+      "backgrounds": []
     }
   },
   "start": {
