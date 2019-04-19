@@ -595,14 +595,296 @@
       },
       "reward": {
         "A": {
-          "efficiency": ""
+          "efficiency": -0.5
         },
         "B": {
-          "efficiency": ""
+          "family": -2
         }
       },
       "images": [],
       "backgrounds": []
+    },
+    "26": {
+      "question": "2 of your family members have died and your beginning to feel weak.",
+      "options": {
+        "A": "Drink fluids to try and combat the cholera",
+        "B": "Find a way to ease the pain"
+      },
+      "path": {
+        "A": "38",
+        "B": "end"
+      },
+      "reward": {
+        "B": {
+          "endMessage": "You have used opium to combat the pain, 2 weeks later and you have overdosed from your addiction"
+        }
+      },
+      "images": [],
+      "backgrounds": []
+    },
+    "27": {
+      "question": "You have been given the job to harvest poppy for the Taliban, You won't make as much from growing it yourself but the risk is a-lot lower",
+      "options": {
+        "all": "all"
+      },
+      "path": {
+        "all": "11"
+      },
+      "reward": {
+        "all": {
+          "money": "100 * $efficiency"
+        }
+      },
+      "images": [],
+      "backgrounds": [],
+      "time": 10
+    },
+    "28": {
+      "question": "a month has passed working for the Taliban",
+      "options": {
+        "A": "Plant poppy seeds  on your own farm",
+        "B": "Escape back to your farm"
+      },
+      "path": {
+        "A": "17",
+        "B": "29"
+      },
+      "reward": {
+        "A": {
+          "money": "150 * $efficiency"
+        }
+      }
+    },
+    "29": {
+      "question": "What crops would you like to grow now?",
+      "options": {
+        "A": "Corn (+75 food -75 money)",
+        "B": "Wheat (+100 food -100 money)",
+        "C": "Rice (+25 food -25 money)",
+        "D": "Cotton (+50 food -50 money)"
+      },
+      "path": {
+        "A": "30",
+        "B": "30",
+        "C": "30",
+        "D": "30"
+      },
+      "reward": {
+        "A": {
+          "money": -75,
+          "food": 75
+        },
+        "B": {
+          "money": -100,
+          "food": 100
+        },
+        "C": {
+          "money": -25,
+          "food": 25
+        },
+        "D": {
+          "money": -50,
+          "food": 50
+        }
+      },
+      "images": [],
+      "backgrounds": []
+    },
+    "30": {
+      "question": "A month has passed growing some of your new crops.",
+      "options": {
+        "all": "all"
+      },
+      "path": {
+        "all": "24"
+      },
+      "reward": {
+        "food": "$food * 0.10"
+      },
+      "images": [],
+      "backgrounds": [],
+      "time": 10
+    },
+    "31": {
+      "question": "Your demand is to high, so you decide to walk back to your farm",
+      "options": {
+        "all": "all"
+      },
+      "path": {
+        "all": "10"
+      },
+      "reward": {},
+      "images": [],
+      "backgrounds": [],
+      "time": 10
+    },
+    "32": {
+      "question": "All has gone well for you and your family, Let's hope it stays that way...",
+      "options": {
+        "all": "all"
+      },
+      "path": {
+        "all": "5"
+      },
+      "reward": {},
+      "images": [],
+      "backgrounds": [],
+      "time": 10
+    },
+    "33": {
+      "question": "While caring for your family you catch cholera yourself.",
+      "options": {
+        "all": "all"
+      },
+      "path": {
+        "all": "26"
+      },
+      "reward": {
+        "family": -2
+      },
+      "images": [],
+      "backgrounds": [],
+      "time": 10
+    },
+    "34": {
+      "question": "The mystery man offers you a deal. Do you take it?",
+      "options": {
+        "A": "No",
+        "B": "Yes"
+      },
+      "path": {
+        "A": "9",
+        "B": "49"
+      },
+      "reward": {
+        "A": {
+          "money": "150 * $efficiency"
+        }
+      }
+    },
+    "35": {
+      "question": "A day has passed walking to the aid clinic, You have 20 miles to go.",
+      "options": {
+        "all": "all"
+      },
+      "path": {
+        "all": "36"
+      },
+      "reward": {},
+      "images": [],
+      "backgrounds": [],
+      "time": 10
+    },
+    "36": {
+      "question": "Your cholera has gotten progressively worse, What do you do?",
+      "options": {
+        "A": "Take a break",
+        "B": "Continue voyage"
+      },
+      "path": {
+        "A": "37",
+        "B": "39"
+      },
+      "reward": {
+        "A": {
+          "efficiency": -0.2
+        }
+      }
+    },
+    "37": {
+      "question": "You find a nice place to rest...",
+      "options": {
+        "all": "all"
+      },
+      "path": {
+        "all": "end"
+      },
+      "reward": {
+        "all": {
+          "endMessage": "You have died in your sleep"
+        }
+      },
+      "images": [],
+      "backgrounds": [],
+      "time": 10
+    },
+    "38": {
+      "question": "It has been a long recovery, but after rehydration therapy, you and your family start to feel better.",
+      "options": {
+        "A": "Return to farming to provide for your family",
+        "B": "Hire someone to help you farm"
+      },
+      "path": {
+        "A": "win",
+        "B": "40"
+      },
+      "reward": {
+        "A": {
+          "winMessage": "win message 38"
+        }
+      }
+    },
+    "39": {
+      "question": "You arrive to the aid clinic, The doctors are able to cure you in time and you have been given food to replenish yourself.",
+      "options": {
+        "all": "all"
+      },
+      "path": {
+        "all": "41"
+      },
+      "reward": {
+        "food": {
+          "food": "$food * 0.10"
+        }
+      },
+      "images": [],
+      "backgrounds": [],
+      "time": 10
+    },
+    "40": {
+      "question": "You have the largest crop yield of the year, you can sell this for a lot at the market.",
+      "options": {
+        "A": "Store the food",
+        "B": "Sell the food"
+      },
+      "path": {
+        "A": "win",
+        "B": "win"
+      },
+      "reward": {
+        "A": {
+          "winMessage": "win message 40 A"
+        },
+        "B": {
+          "winMessage": "win message 40 B"
+        }
+      }
+    },
+    "41": {
+      "question": "After a rough journey you have arrived home.",
+      "options": {
+        "A": "Continue farming as a farmer and provide for your family",
+        "B": "Sell the food"
+      },
+      "path": {
+        "A": "win",
+        "B": "20"
+      },
+      "reward": {
+        "A": {
+          "winMessage": "win message 41 A"
+        }
+      }
+    },
+    "42": {
+      "question": "A month has passed and your farm has fully grown and is ready to harvest.",
+      "options": {
+        "all": "all"
+      },
+      "path": {
+        "42": "4"
+      },
+      "reward": {}
     }
   },
   "start": {
