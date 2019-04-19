@@ -435,7 +435,7 @@
       "reward": {},
       "images": [],
       "backgrounds": [],
-      "time": 10
+      "time": 5
     },
     "18": {
       "question": "Uh oh, you see a storm brewing. Think fast!",
@@ -637,7 +637,7 @@
       },
       "images": [],
       "backgrounds": [],
-      "time": 10
+      "time": 5
     },
     "28": {
       "question": "a month has passed working for the Taliban",
@@ -703,7 +703,7 @@
       },
       "images": [],
       "backgrounds": [],
-      "time": 10
+      "time": 5
     },
     "31": {
       "question": "Your demand is to high, so you decide to walk back to your farm",
@@ -716,7 +716,7 @@
       "reward": {},
       "images": [],
       "backgrounds": [],
-      "time": 10
+      "time": 5
     },
     "32": {
       "question": "All has gone well for you and your family, Let's hope it stays that way...",
@@ -729,7 +729,7 @@
       "reward": {},
       "images": [],
       "backgrounds": [],
-      "time": 10
+      "time": 5
     },
     "33": {
       "question": "While caring for your family you catch cholera yourself.",
@@ -744,7 +744,7 @@
       },
       "images": [],
       "backgrounds": [],
-      "time": 10
+      "time": 5
     },
     "34": {
       "question": "The mystery man offers you a deal. Do you take it?",
@@ -773,7 +773,7 @@
       "reward": {},
       "images": [],
       "backgrounds": [],
-      "time": 10
+      "time": 5
     },
     "36": {
       "question": "Your cholera has gotten progressively worse, What do you do?",
@@ -806,7 +806,7 @@
       },
       "images": [],
       "backgrounds": [],
-      "time": 10
+      "time": 5
     },
     "38": {
       "question": "It has been a long recovery, but after rehydration therapy, you and your family start to feel better.",
@@ -839,7 +839,7 @@
       },
       "images": [],
       "backgrounds": [],
-      "time": 10
+      "time": 5
     },
     "40": {
       "question": "You have the largest crop yield of the year, you can sell this for a lot at the market.",
@@ -882,10 +882,101 @@
         "all": "all"
       },
       "path": {
-        "42": "4"
+        "all": "4"
+      },
+      "reward": {}
+    },
+    "43": {
+      "question": "You have sold your crops and you are on your way home.",
+      "options": {
+        "all": "all"
+      },
+      "path": {
+        "all": "5"
+      },
+      "reward": {}
+    },
+    "44": {
+      "question": "A month has passed growing your crops.",
+      "options": {
+        "all": "all"
+      },
+      "path": {
+        "all": "7"
+      },
+      "reward": {}
+    },
+    "45": {
+      "question": "After buying your new crops you decide to walk home and someone is stopping you...",
+      "options": {
+        "all": "all"
+      },
+      "path": {
+        "all": "10"
+      },
+      "reward": {}
+    },
+    "46": {
+      "question": "Two weeks have passed. Your farm is doing fairly well.",
+      "options": {
+        "all": "all"
+      },
+      "path": {
+        "all": "18"
+      },
+      "reward": {}
+    },
+    "47": {
+      "question": "Because you picked not to grow poppy plants you are helping to stop the opium crisis across the world.",
+      "options": {
+        "all": "all"
+      },
+      "path": {
+        "all": "18"
+      },
+      "reward": {}
+    },
+    "48": {
+      "question": "You begin begging for jobs at the public market.",
+      "options": {
+        "all": "all"
+      },
+      "path": {
+        "all": "20"
+      },
+      "reward": {}
+    },
+    "49": {
+      "question": "The Mystery mans ensures that the deal is risky and isn't the safest but he says it is worth the reward.",
+      "options": {
+        "all": "all"
+      },
+      "path": {
+        "all": "49"
+      },
+      "reward": {}
+    },
+    "50": {
+      "question": "You have accepted  his deal and will follow his orders. ",
+      "options": {
+        "all": "all"
+      },
+      "path": {
+        "all": "17"
+      },
+      "reward": {}
+    },
+    "51": {
+      "question": "On the way to your farm you decide to drink some water. ",
+      "options": {
+        "all": "all"
+      },
+      "path": {
+        "all": "24"
       },
       "reward": {}
     }
+
   },
   "start": {
     "url": "frames/title.png",

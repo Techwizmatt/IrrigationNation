@@ -374,7 +374,7 @@ function handleReward(selectedOption){
                 if (value.match(/[a-z]/i)) {
                     gameArea.variables[variable] = value;
                 } else {
-                    gameArea.variables[variable] = eval(value);
+                    gameArea.variables[variable] = gameArea.variables[variable] + eval(value);
                 }
 
             }
