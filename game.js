@@ -20,7 +20,7 @@ let gameArea = {
     variables: null,
     objectives: null,
     variable_icons: null,
-    fontSize: 20,
+    fontSize: 22,
     currentFrame: 0,
     uuid: uuidv4()
 }
@@ -37,21 +37,21 @@ function createFrame(callback){
 
     let frame = gameArea.data.frames[gameArea.currentFrame];
 
-
-    
     drawBackgrounds(frame['backgrounds'], function(){
         drawImages(frame['images'], function(){
             drawVariables(function (){
                 drawQuestion(frame['question'], function(){
                     drawOptions(frame['options'], function(){
 
-                        var time = 15;
+                        var time = 10;
 
                         if (frame['time'] != null) {
                             time = frame['time']
                         }
 
                         sendFrame(replaceAllStringVariables(frame['question']),frame['options'], time);
+
+                        logFrameInfo();
 
                         callback(true);
                     });
@@ -434,6 +434,10 @@ function hitEndGame(callback){
 
     var img = new Image();
 
+    ctx.fillStyle = end['background'];
+
+    ctx.fillRect(0,0, window.innerWidth, window.innerHeight);
+
     var width = end['width'];
     var height = end['height'];
 
@@ -442,7 +446,7 @@ function hitEndGame(callback){
         var thisWidth = width;
         var thisHeight = height;
         var thisX = (window.innerWidth / 2) - (thisWidth / 2);
-        var thisY = (window.innerHeight / 2) - (thisHeight / 2);
+        var thisY = ((window.innerHeight / 2) - (thisHeight / 2) - 300);
 
         return function(){
             ctx.drawImage(this,thisX,thisY,thisWidth,thisHeight);
@@ -463,6 +467,10 @@ function hitEndGame(callback){
         x = (window.innerWidth / 2) - (width / 2);
     }
 
+    if (ctx.measureText(endMessage).width <= (width - 50)){
+        x = (window.innerWidth / 2) - (ctx.measureText(endMessage).width / 2);
+    }
+
     if (y.includes("center")) {
         y = (window.innerHeight / 2);
     }
@@ -472,19 +480,136 @@ function hitEndGame(callback){
 
         gameArea.canvas.getContext("2d").font = "40px main";
 
-        fadeInText(ctx,"Press any key to restart...", (window.innerWidth / 2) - 230,(window.innerHeight - 200),0,0,0);
+        fadeInText(ctx,"Created by", (window.innerWidth / 2) - (ctx.measureText("Created by").width / 2),(window.innerHeight - 300),255,255,255);
+
+        setTimeout(function(){
+            gameArea.canvas.getContext("2d").font = "24px main";
+            fadeInText(ctx,"Matthew Maggio (Software)", (window.innerWidth / 2) - (ctx.measureText("Matthew Maggio (Software)").width / 2),(window.innerHeight - 250),255,255,255);
+            setTimeout(function(){
+                fadeInText(ctx,"Austin Keller (Graphic Design)", (window.innerWidth / 2) - (ctx.measureText("Austin Keller (Graphic Design)").width / 2),(window.innerHeight - 215),255,255,255);
+                setTimeout(function(){
+                    fadeInText(ctx,"Michael McCanna (Storyline designer)", (window.innerWidth / 2) - (ctx.measureText("Michael McCanna (Storyline designer)").width / 2),(window.innerHeight - 180),255,255,255);
+                    setTimeout(function(){
+                        fadeInText(ctx,"Ryan Atkinson (Storyline designer)", (window.innerWidth / 2) - (ctx.measureText("Ryan Atkinson (Storyline designer)").width / 2),(window.innerHeight - 145),255,255,255);
+                        setTimeout(function(){
+                            fadeInText(ctx,"Ashton Wilkinson (Storyline designer)", (window.innerWidth / 2) - (ctx.measureText("Ashton Wilkinson (Storyline designer)").width / 2),(window.innerHeight - 110),255,255,255);
+                            setTimeout(function(){
+                                gameArea.canvas.getContext("2d").font = "40px main";
+
+                                ctx.fillStyle = end['background'];
+                                ctx.fillRect(0,(window.innerHeight - 350), window.innerWidth, 500);
+
+                                setTimeout(function(){
+                                    fadeInText(ctx,"Press any key to restart...", (window.innerWidth / 2) - (ctx.measureText("Press any key to restart...").width / 2),(window.innerHeight - 200),255,255,255);
+                                    callback();
+                                    window.addEventListener('keydown', handler);
+                                },500);
+                            }, 5000);
+                        }, 1000);
+                    }, 1000);
+                }, 1000);
+            }, 1000);
+        }, 1000);
+
 
         var handler = function (e) {
             window.removeEventListener('keydown', handler);
 
-            // location.reload(true);
+            gameArea.title();
+        };
+
+    });
+
+
+}
+
+function hitWinGame(callback){
+
+    clearScreen();
+
+    var endMessage = gameArea.variables['endMessage'];
+
+    debuggerLog("Win message: " + endMessage);
+
+    var win = gameArea.data['win'];
+
+    var ctx = gameArea.canvas.getContext("2d");
+
+    ctx.fillStyle = win['background'];
+
+    ctx.fillRect(0,0, window.innerWidth, window.innerHeight);
+
+    var img = new Image();
+
+    var width = win['width'];
+    var height = win['height'];
+
+    img.onload = function(){
+
+        var thisWidth = width;
+        var thisHeight = height;
+        var thisX = (window.innerWidth / 2) - (thisWidth / 2);
+        var thisY = ((window.innerHeight / 2) - (thisHeight / 2) - 300);
+
+        return function(){
+            ctx.drawImage(this,thisX,thisY,thisWidth,thisHeight);
+        }
+
+    }();
+
+    img.src = win['url'];
+
+    var text = win['text'];
+
+    var x = text['x'];
+    var y = text['y'];
+    var size = text['size'];
+    var width = text['width'];
+
+    if (x.includes("center")) {
+        x = (window.innerWidth / 2) - (width / 2);
+    }
+
+    if (ctx.measureText(endMessage).width <= (width - 50)){
+        x = (window.innerWidth / 2) - (ctx.measureText(endMessage).width / 2);
+    }
+
+    if (y.includes("center")) {
+        y = (window.innerHeight / 2);
+    }
+
+    typeOut(endMessage,x,y, size, width, text['color'],function(){
+        debuggerLog("Game is completely over, The next key tap will reload the game.");
+
+        gameArea.canvas.getContext("2d").font = "40px main";
+
+        fadeInText(ctx,"Created by...", (window.innerWidth / 2) - 230,(window.innerHeight - 300),0,0,0);
+
+        setTimeout(function(){
+            gameArea.canvas.getContext("2d").font = "24px main";
+            fadeInText(ctx,"Matthew Maggio (Software)", (window.innerWidth / 2) - 230,(window.innerHeight - 250),0,0,0);
+            setTimeout(function(){
+                fadeInText(ctx,"Austin Keller (Graphic Design)", (window.innerWidth / 2) - 230,(window.innerHeight - 215),0,0,0);
+                setTimeout(function(){
+                    fadeInText(ctx,"Michael McCanna (Storyline designer)", (window.innerWidth / 2) - 230,(window.innerHeight - 180),0,0,0);
+                    setTimeout(function(){
+                        fadeInText(ctx,"Ryan Atkinson (Storyline designer)", (window.innerWidth / 2) - 230,(window.innerHeight - 145),0,0,0);
+                        setTimeout(function(){
+                            fadeInText(ctx,"Ashton Wilkinson (Storyline designer)", (window.innerWidth / 2) - 230,(window.innerHeight - 110),0,0,0);
+                            callback();
+                            window.addEventListener('keydown', handler);
+                        }, 1000);
+                    }, 1000);
+                }, 1000);
+            }, 1000);
+        }, 1000);
+
+        var handler = function (e) {
+            window.removeEventListener('keydown', handler);
 
             gameArea.title();
         };
 
-        window.addEventListener('keydown', handler);
-
-        callback();
     });
 
 
@@ -609,6 +734,10 @@ function listenKeyDown() {
                     debuggerLog('Game has hit the end.');
                 });
                 return;
+            } else if (nextFrame == "win"){
+                hitWinGame(function(){
+                   debuggerLog('User has won game!');
+                });
             }
 
             gameArea.currentFrame = nextFrame;
@@ -790,4 +919,40 @@ function uuidv4() {
         var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
         return v.toString(16);
     });
+}
+
+function logFrameInfo(){
+    let frame = gameArea.data.frames[gameArea.currentFrame];
+
+    var message =
+        "<h3>FRAME INFO</h3>"
+        +"- Frame number: " + gameArea.currentFrame
+        + "\n <br> \n"
+        + "- Path: " + objToString(frame['path'])
+        + "\n <br><br> \n";
+
+    debuggerLog(message);
+}
+
+function objToString (obj) {
+    var str = '';
+    for (var p in obj) {
+        if (obj.hasOwnProperty(p)) {
+            str += p + ' -> ' + obj[p] + '\n';
+        }
+    }
+    return str;
+}
+
+function listenForReload() {
+
+    var handler = function (e) {
+
+        var keyPressed = e.key.toUpperCase();
+        //Reload the data...
+        return;
+    };
+
+    window.addEventListener('keydown', handler);
+
 }

@@ -2,13 +2,14 @@ var serverId = getUrlParam('id', false);
 
 if (serverId == false) {
     alert('ID is NULL');
-    die('ID IS NULL');
+    throw new Error("ID is NULL");
 }
 
-var socket = io('http://techhost.co:235',{ query: "id=" + serverId }); 
+var socket = io('http://techhost.co:235',{ query: "id=" + serverId });
 
 socket.on('connect', function(){
     console.log('Connected to Multiplayer IO server.');
+    $('#donate').hide();
 });
 
 socket.on('frame', function(data){
@@ -25,21 +26,25 @@ socket.on('frame', function(data){
                 $('#A').hide();
             } else {
                 $('#A').fadeIn("slow");
+                $('#A').html("<p style='padding:0;margin:0;' ><b>A</b>:&nbsp;" + data['options']['A']+ "</p>");
             }
             if (data['options']['B'] == null) {
                 $('#B').hide();
             } else {
                 $('#B').fadeIn("slow");
+                $('#B').html("<p><b>B</b>:&nbsp;" + data['options']['B']+ "</p>");
             }
             if (data['options']['C'] == null) {
                 $('#C').hide();
             } else {
                 $('#C').fadeIn("slow");
+                $('#C').html("<p><b>C</b>:&nbsp;" + data['options']['C']+ "</p>");
             }
             if (data['options']['D'] == null) {
                 $('#D').hide()
             } else {
                 $('#D').fadeIn("slow");
+                $('#D').html("<p><b>D</b>:&nbsp;" + data['options']['D']+ "</p>");
             }
 
             startTimer(data['time']);
@@ -51,9 +56,9 @@ socket.on('frame', function(data){
                     setTimeout(function(){
 
                         $('#other').fadeOut("fast");
-                    }, 7000);
+                    }, 6000);
                 });
-            }, 3000);
+            }, 1000);
             socket.emit('option', {"option":"*"});
         }
     }

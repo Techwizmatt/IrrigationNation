@@ -56,7 +56,7 @@ function sendFrame(question, options, time){
 
     startTimer(time);
 
-    debuggerLog("Sent frame info to server");
+    debuggerLog("Sent frame info to server, frameTime: " + time + " seconds.");
 }
 
 function createQR(){
@@ -72,7 +72,7 @@ function startTimer(time){
         passTime++
 
         if(passTime >= time){
-            clearInterval(repeat); 
+            clearInterval(repeat);
 
             setTimeout( function(){
                 $( "#timeBar" ).animate({
