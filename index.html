@@ -25,20 +25,26 @@
 <body style="margin:0 !important; overflow: hidden !important;">
 <div id="preloader" style="display: block; position: fixed; left:0; top:0;width:100%;height: 100%; background: url('https://i.imgur.com/L7epMzE.gif') #bdc3c7 no-repeat; background-position: center; background-size: 100px" ></div>
 <!--The game canvas will be created here-->
-<div id="debug" style="display: none; position: fixed; left:0; bottom: 0; height: 250px; width: 400px; background: #2980b9; color: white; border: 0; border-top-right-radius: 10px;">
+<div id="debug" style="display: none; position: fixed; left:0; bottom: 0; height: 300px; width: 400px; background: #2980b9; color: white; border: 0; border-top-right-radius: 10px;">
    <div>
        <h1 style="margin:0;padding-top: 5px;padding-left: 5px;">Debugger</h1>
        <button onclick="clearLog();" style="position: absolute; top: 0; right:10px; width: 100px; height: 30px; background: #34495e; border:0; border-radius: 5px; color: white; margin-top: 10px !important; cursor: pointer;outline:none !important;">Clear log</button>
        <button onclick="downloadLog();" style="position: absolute; top: 0; right:120px; width: 100px; height: 30px; background: #34495e; border:0; border-radius: 5px; color: white; margin-top: 10px !important; cursor: pointer;outline:none !important;">Save log</button>
+       <form id="frameWindowInput" action="" method="get" >
+           <input type="hidden" name="debug" value="true">
+           <input type="number" name="frame" style="margin: 5px 10px; position: absolute; float:left; width: 100px; height: 20px; border:0; right:60px; top:45px; background: #34495e; color:white;" placeholder="frameNumber">
+           <input type="submit" value="Go" style=" position: absolute; float:left; width: 40px; height: 30px; border:0; right: 10px; top:45px; border:0 ; border-radius: 5px; background: #34495e; color:white;">
+       </form>
    </div>
-    <div id="debugLog" style="position: absolute;bottom:0;left:0;right:0;top:45px; overflow: scroll !important; background: #000000;margin: 5px !important; margin-bottom: 5px !important; padding: 2px;">
+    <div id="debugLog" style="position: absolute;bottom:0;left:0;right:0;top:80px; overflow: scroll !important; background: #000000;margin: 5px !important; margin-bottom: 5px !important; padding: 2px;">
     </div>
 </div>
-<div id="multiplayer" style="display: none; position: fixed; top:0; left:0; width: 240px; height: 300px; background: #45aaf2; border: 0; border-bottom-right-radius: 5px; color: white; " >
+<div id="multiplayer" style="display: none; position: fixed; top:0; left:0; width: 240px; height: 305px; background: #45aaf2; border: 0; border-bottom-right-radius: 5px; color: white; " >
     <div id="details">
         <div id="timeLeft" style="width: calc(100% - 20px); height: 40px; margin: 10px; background:#4b7bec; border:0; border-radius: 5px;" ><div id="timeBar" style="background:#20bf6b; height: 40px; border:0; border-radius: 5px;" ></div></div>
     </div>
     <img id="joinQR" src="" style="position: absolute; bottom:10px; left: 8px;">
+    <h6 id="joinCode" style="position: absolute; bottom:0; left: 0; color:#45aaf2; margin:0; padding:0; font-size: 7px;" ></h6>
 </div>
 <div id="winningOption" style="display:none; position: fixed; bottom:10px; right:10px; width: 200px; height: 200px; background: #20bf6b; border: 0; border-radius: 5px; color: white; font-size: 100px; text-align: center; vertical-align: middle; line-height: 200px;">
 </div>

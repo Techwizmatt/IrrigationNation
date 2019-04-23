@@ -61,6 +61,7 @@ function sendFrame(question, options, time){
 
 function createQR(){
     $('#joinQR').attr('src','https://api.qrserver.com/v1/create-qr-code/?data=http://techwizmatt.info/projects/school/eng/game/client?id='+ id +'&size=220x220&margin=0');
+    $('#joinCode').text(id);
 }
 
 function startTimer(time){
@@ -90,8 +91,4 @@ function startTimer(time){
         }, 900);
 
     }, 900);
-}
-
-function simulateKeyPress(character) {
-    window.dispatchEvent(new KeyboardEvent('keydown',{'key':character}));
 }

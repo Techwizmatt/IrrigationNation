@@ -14,7 +14,20 @@ let gameArea = {
         this.canvas.height = window.innerHeight;
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
         $('#preloader').hide();
-        showStartScreen();
+        showStartScreen(function(){
+            if(getUrlParam('debug', false)){
+                console.log('Pressed');
+                // startGame();
+                setTimeout(function(){
+                    simulateKeyPress('*');
+                }, 100);
+
+
+                // // createFrame(this.currentFrame);
+            }
+        });
+
+
     },
     data: null,
     variables: null,
@@ -666,7 +679,7 @@ $(window).resize(function() {
     debuggerLog("Resizing the screen will effect the game, a reload may be required!");
 });
 
-function showStartScreen(){
+function showStartScreen(callback){
     $.getJSON("options.json",{}, function( data ){
 
         gameArea.data = data;
@@ -700,9 +713,13 @@ function showStartScreen(){
         var handler = function (e) {
             startGame();
             window.removeEventListener('keydown', handler);
+
+
         };
 
         window.addEventListener('keydown', handler);
+
+        callback();
     });
 }
 
@@ -956,3 +973,4 @@ function listenForReload() {
     window.addEventListener('keydown', handler);
 
 }
+

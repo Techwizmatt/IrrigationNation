@@ -40,8 +40,124 @@
           "efficiency": 1
         }
       },
-      "images": [],
-      "backgrounds": []
+      "images": [
+        {
+          "url": "frames/tree.png",
+          "x": 100,
+          "y": -60,
+          "width": 150,
+          "height": 200,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/cloud.png",
+          "x": -220,
+          "y": -300,
+          "width": 100,
+          "height": 60,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/cloud.png",
+          "x": 0,
+          "y": -280,
+          "width": 100,
+          "height": 60,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/cloud.png",
+          "x": 210,
+          "y": -363,
+          "width": 100,
+          "height": 60,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/cloud.png",
+          "x": -100,
+          "y": -350,
+          "width": 100,
+          "height": 60,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/crops.png",
+          "x": -100,
+          "y": -20,
+          "width": 200,
+          "height": "auto",
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/tree.png",
+          "x": -400,
+          "y": 20,
+          "width": 150,
+          "height": 200,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/tree.png",
+          "x": -280,
+          "y": -90,
+          "width": 150,
+          "height": 200,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/house.png",
+          "x": 200,
+          "y": 0,
+          "width": 200,
+          "height": 180,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/farmer-fork.png",
+          "x": 80,
+          "y": 10,
+          "width": 100,
+          "height": 100,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        }
+      ],
+      "backgrounds": [
+        {
+          "color": "#3498db",
+          "x": "left",
+          "y": "center",
+          "width": "100%",
+          "height": "100%"
+        },
+        {
+          "color": "#2ecc71",
+          "x": "left",
+          "y": "center",
+          "width": "100%",
+          "height": "180"
+        }
+      ]
     },
     "2": {
       "question": "You are a farmer which crop do you want to grow? ",
@@ -75,8 +191,27 @@
           "food": 50
         }
       },
-      "images": [],
-      "backgrounds": []
+      "images": [
+        {
+          "url": "frames/plants.png",
+          "x": -560,
+          "y": 0,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        }
+      ],
+      "backgrounds": [
+        {
+          "color": "#9b59b6",
+          "x": "left",
+          "y": "top",
+          "width": "100%",
+          "height": "100%"
+        }
+      ]
     },
     "3": {
       "question": "You need to buy tools to grow your crops, Which tools do you want?",
@@ -114,8 +249,27 @@
           "food": "$food * $efficiency"
         }
       },
-      "images": [],
-      "backgrounds": []
+      "images": [
+        {
+          "url": "frames/tools.png",
+          "x": -480,
+          "y": 0,
+          "width": 800,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        }
+      ],
+      "backgrounds": [
+        {
+          "color": "#2ecc71",
+          "x": "left",
+          "y": "top",
+          "width": "100%",
+          "height": "100%"
+        }
+      ]
     },
     "4": {
       "question": "Your neighbors family has no food.",
@@ -143,8 +297,27 @@
           "food": "$food * 0.8"
         }
       },
-      "images": [],
-      "backgrounds": []
+      "images": [
+        {
+          "url": "frames/add.png",
+          "x": -150,
+          "y": 0,
+          "width": 300,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        }
+      ],
+      "backgrounds": [
+        {
+          "color": "#3498db",
+          "x": "left",
+          "y": "top",
+          "width": "100%",
+          "height": "100%"
+        }
+      ]
     },
     "5": {
       "question": "A Taliban member has stopped you because he heard you have money and wants to take it.",
@@ -171,8 +344,114 @@
           "money": "-$money * 0.2"
         }
       },
-      "images": [],
-      "backgrounds": []
+      "images": [
+        {
+          "url": "frames/tree.png",
+          "x": 130,
+          "y": -90,
+          "width": 100,
+          "height": 150,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/tree.png",
+          "x": -200,
+          "y": -80,
+          "width": 75,
+          "height": 125,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/cloud.png",
+          "x": -220,
+          "y": -300,
+          "width": 100,
+          "height": 60,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/cloud.png",
+          "x": 0,
+          "y": -280,
+          "width": 100,
+          "height": 60,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/cloud.png",
+          "x": 210,
+          "y": -363,
+          "width": 100,
+          "height": 60,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/cloud.png",
+          "x": -100,
+          "y": -350,
+          "width": 100,
+          "height": 60,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/fact5.png",
+          "x": -400,
+          "y": -250,
+          "width": 380,
+          "height": "auto",
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/farmerMirrored.png",
+          "x": -80,
+          "y": 10,
+          "width": 130,
+          "height": 120,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/armyGuy.png",
+          "x": 80,
+          "y": 10,
+          "width": 80,
+          "height": 120,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        }
+      ],
+      "backgrounds": [
+        {
+          "color": "#3498db",
+          "x": "left",
+          "y": "center",
+          "width": "100%",
+          "height": "100%"
+        },
+        {
+          "color": "#2ecc71",
+          "x": "left",
+          "y": "center",
+          "width": "100%",
+          "height": "180"
+        }
+      ]
     },
     "6": {
       "question": "The authorities have much bigger problems and can't help.",
@@ -185,8 +464,27 @@
         "B": "12"
       },
       "reward": {},
-      "images": [],
-      "backgrounds": []
+      "images": [
+        {
+          "url": "frames/police.png",
+          "x": -200,
+          "y": 10,
+          "width": 400,
+          "height": "auto",
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        }
+      ],
+      "backgrounds": [
+        {
+          "color": "#3498db",
+          "x": "left",
+          "y": "center",
+          "width": "100%",
+          "height": "100%"
+        }
+      ]
     },
     "7": {
       "question": "All of your crops have been harvest and you have a nice yield.",
@@ -208,8 +506,124 @@
           "food": "-$food * 0.8"
         }
       },
-      "images": [],
-      "backgrounds": []
+      "images": [
+        {
+          "url": "frames/tree.png",
+          "x": 80,
+          "y": -30,
+          "width": 200,
+          "height": 300,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/cloud.png",
+          "x": -220,
+          "y": -300,
+          "width": 100,
+          "height": 60,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/cloud.png",
+          "x": 0,
+          "y": -280,
+          "width": 100,
+          "height": 60,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/cloud.png",
+          "x": 210,
+          "y": -363,
+          "width": 100,
+          "height": 60,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/cloud.png",
+          "x": -100,
+          "y": -350,
+          "width": 100,
+          "height": 60,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/farmerMirrored.png",
+          "x": -80,
+          "y": 10,
+          "width": 130,
+          "height": 120,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/house.png",
+          "x": 200,
+          "y": 0,
+          "width": "auto",
+          "height": 180,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/crops.png",
+          "x": -300,
+          "y": -50,
+          "width": 180,
+          "height": "auto",
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/house.png",
+          "x": -400,
+          "y": 0,
+          "width": "auto",
+          "height": 180,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/marketSign.png",
+          "x": 230,
+          "y": -100,
+          "width": 120,
+          "height": "auto",
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": false
+        }
+      ],
+      "backgrounds": [
+        {
+          "color": "#3498db",
+          "x": "left",
+          "y": "center",
+          "width": "100%",
+          "height": "100%"
+        },
+        {
+          "color": "#2ecc71",
+          "x": "left",
+          "y": "center",
+          "width": "100%",
+          "height": "180"
+        }
+      ]
     },
     "8": {
       "question": "What crops would you like to buy?",
@@ -243,8 +657,27 @@
           "food": 50
         }
       },
-      "images": [],
-      "backgrounds": []
+      "images": [
+        {
+          "url": "frames/plants.png",
+          "x": -500,
+          "y": 0,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        }
+      ],
+      "backgrounds": [
+        {
+          "color": "#3498db",
+          "x": "left",
+          "y": "top",
+          "width": "100%",
+          "height": "100%"
+        }
+      ]
     },
     "9": {
       "question": "A week has passed, You currently have $food food",
@@ -265,8 +698,27 @@
           "food": "-$food * 0.3"
         }
       },
-      "images": [],
-      "backgrounds": []
+      "images": [
+        {
+          "url": "frames/bowl.png",
+          "x": -250,
+          "y": 0,
+          "width": 500,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        }
+      ],
+      "backgrounds": [
+        {
+          "color": "#3498db",
+          "x": "left",
+          "y": "top",
+          "width": "100%",
+          "height": "100%"
+        }
+      ]
     },
     "10": {
       "question": "You have been offered a high-risk but high-reward crop called poppy, Do you want to grow it?",
@@ -290,8 +742,27 @@
           "endMessage": "Snitches get stitches, You have been killed."
         }
       },
-      "images": [],
-      "backgrounds": []
+      "images": [
+        {
+          "url": "frames/poppy.png",
+          "x": -250,
+          "y": 0,
+          "width": 500,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        }
+      ],
+      "backgrounds": [
+        {
+          "color": "#3498db",
+          "x": "left",
+          "y": "top",
+          "width": "100%",
+          "height": "100%"
+        }
+      ]
     },
     "11": {
       "question": "The Taliban is going to take over your farm, Think fast!",
@@ -312,8 +783,124 @@
           "food": "-$food * 0.5"
         }
       },
-      "images": [],
-      "backgrounds": [],
+      "images": [
+        {
+          "url": "frames/tree.png",
+          "x": 130,
+          "y": -90,
+          "width": 100,
+          "height": 150,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/tree.png",
+          "x": -110,
+          "y": -80,
+          "width": 75,
+          "height": 125,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/cloud.png",
+          "x": -220,
+          "y": -300,
+          "width": 100,
+          "height": 60,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/cloud.png",
+          "x": 0,
+          "y": -280,
+          "width": 100,
+          "height": 60,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/cloud.png",
+          "x": 210,
+          "y": -363,
+          "width": 100,
+          "height": 60,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/cloud.png",
+          "x": -100,
+          "y": -350,
+          "width": 100,
+          "height": 60,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/farmerMirrored.png",
+          "x": -80,
+          "y": 10,
+          "width": 130,
+          "height": 120,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/armyGuy.png",
+          "x": 80,
+          "y": 10,
+          "width": 80,
+          "height": 120,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/crops.png",
+          "x": -300,
+          "y": -50,
+          "width": 180,
+          "height": "auto",
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/house.png",
+          "x": -400,
+          "y": 0,
+          "width": "auto",
+          "height": 180,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        }
+      ],
+      "backgrounds": [
+        {
+          "color": "#3498db",
+          "x": "left",
+          "y": "center",
+          "width": "100%",
+          "height": "100%"
+        },
+        {
+          "color": "#2ecc71",
+          "x": "left",
+          "y": "center",
+          "width": "100%",
+          "height": "180"
+        }
+      ],
       "time": 7
     },
     "12": {
@@ -331,8 +918,27 @@
           "endMessage": "Your neighbor has caught you stealing and shoots you dead in his house."
         }
       },
-      "images": [],
-      "backgrounds": []
+      "images": [
+        {
+          "url": "frames/neighbor.png",
+          "x": -200,
+          "y": 10,
+          "width": 400,
+          "height": "auto",
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        }
+      ],
+      "backgrounds": [
+        {
+          "color": "#3498db",
+          "x": "left",
+          "y": "center",
+          "width": "100%",
+          "height": "100%"
+        }
+      ]
     },
     "13": {
       "question": "What tools do you want to buy?",
@@ -366,8 +972,27 @@
           "efficiency": 0.50
         }
       },
-      "images": [],
-      "backgrounds": []
+      "images": [
+        {
+          "url": "frames/tools.png",
+          "x": -580,
+          "y": 0,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        }
+      ],
+      "backgrounds": [
+        {
+          "color": "#2ecc71",
+          "x": "left",
+          "y": "top",
+          "width": "100%",
+          "height": "100%"
+        }
+      ]
     },
     "14": {
       "question": "How much do you want for half of $food food you have?",
@@ -393,8 +1018,27 @@
           "food": "-$food / 2"
         }
       },
-      "images": [],
-      "backgrounds": []
+      "images": [
+        {
+          "url": "frames/bowl.png",
+          "x": -250,
+          "y": 0,
+          "width": 500,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        }
+      ],
+      "backgrounds": [
+        {
+          "color": "#3498db",
+          "x": "left",
+          "y": "top",
+          "width": "100%",
+          "height": "100%"
+        }
+      ]
     },
     "15": {
       "question": "Poppy is used to make opiates, which is highly addictive. Do you still want to grow it?",
@@ -411,8 +1055,27 @@
           "money": "150 * $efficiency"
         }
       },
-      "images": [],
-      "backgrounds": []
+      "images": [
+        {
+          "url": "frames/heroinNeedle.png",
+          "x": -250,
+          "y": 100,
+          "width": 500,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        }
+      ],
+      "backgrounds": [
+        {
+          "color": "#3498db",
+          "x": "left",
+          "y": "top",
+          "width": "100%",
+          "height": "100%"
+        }
+      ]
     },
     "16": {
       "question": "All of your poppy has been taken away along with 50% of your money, What are you going to do?",
@@ -425,8 +1088,27 @@
         "B": "9"
       },
       "reward": {},
-      "images": [],
-      "backgrounds": []
+      "images": [
+        {
+          "url": "frames/add.png",
+          "x": -150,
+          "y": 0,
+          "width": 300,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        }
+      ],
+      "backgrounds": [
+        {
+          "color": "#3498db",
+          "x": "left",
+          "y": "top",
+          "width": "100%",
+          "height": "100%"
+        }
+      ]
     },
     "17": {
       "question": "A month passes growing poppy, The Taliban has learned that you are becoming profitable and is displeased...",
@@ -437,8 +1119,77 @@
         "all": "11"
       },
       "reward": {},
-      "images": [],
-      "backgrounds": [],
+      "images": [
+        {
+          "url": "frames/mountains.png",
+          "x": -500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/mountains.png",
+          "x": -1500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/mountains.png",
+          "x": 500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": -500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": -1500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": 500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        }
+      ],
+      "backgrounds": [
+        {
+          "color": "#2f3640",
+          "x": "left",
+          "y": "top",
+          "width": "100%",
+          "height": "100%"
+        }
+      ],
       "time": 5
     },
     "18": {
@@ -470,8 +1221,114 @@
           "endMessage": "The storm causes a land slide from the mountain beside you and blows over your home and kills your entire family"
         }
       },
-      "images": [],
-      "backgrounds": [],
+      "images": [
+        {
+          "url": "frames/mountains.png",
+          "x": -500,
+          "y": -120,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/mountains.png",
+          "x": -1500,
+          "y": -120,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/mountains.png",
+          "x": 500,
+          "y": -120,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": -500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": -1500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": 500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/farmerMirrored.png",
+          "x": -80,
+          "y": 10,
+          "width": 130,
+          "height": 120,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/crops.png",
+          "x": 80,
+          "y": -30,
+          "width": 180,
+          "height": "auto",
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/house.png",
+          "x": 200,
+          "y": 0,
+          "width": "auto",
+          "height": 180,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        }
+      ],
+      "backgrounds": [
+        {
+          "color": "#2f3640",
+          "x": "left",
+          "y": "center",
+          "width": "100%",
+          "height": "100%"
+        },
+        {
+          "color": "#2b6316",
+          "x": "left",
+          "y": "center",
+          "width": "100%",
+          "height": "180"
+        }
+      ],
       "time": 7
     },
     "19": {
@@ -485,8 +1342,27 @@
         "B": "34"
       },
       "reward": {},
-      "images": [],
-      "backgrounds": []
+      "images": [
+        {
+          "url": "frames/cropsBirdEye.png",
+          "x": -500,
+          "y": 10,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        }
+      ],
+      "backgrounds": [
+        {
+          "color": "#38b54a",
+          "x": "left",
+          "y": "center",
+          "width": "100%",
+          "height": "100%"
+        }
+      ]
     },
     "20": {
       "question": "Someone has offered you a side job, but it will cost you labor",
@@ -499,8 +1375,27 @@
         "B": "23"
       },
       "reward": {},
-      "images": [],
-      "backgrounds": []
+      "images": [
+        {
+          "url": "frames/add.png",
+          "x": -150,
+          "y": 0,
+          "width": 300,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        }
+      ],
+      "backgrounds": [
+        {
+          "color": "#3498db",
+          "x": "left",
+          "y": "top",
+          "width": "100%",
+          "height": "100%"
+        }
+      ]
     },
     "21": {
       "question": "The storm passes and all your crops were saved on time, but the only available water during the storm was contaminated and gave your family cholera. How are you going to survive this?",
@@ -528,8 +1423,37 @@
           "endMessage": "While tending to your farm your family has died..."
         }
       },
-      "images": [],
-      "backgrounds": []
+      "images": [
+        {
+          "url": "frames/choleraA1.png",
+          "x": -350,
+          "y": 0,
+          "width": 300,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/choleraA2.png",
+          "x": 50,
+          "y": 0,
+          "width": 300,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        }
+      ],
+      "backgrounds": [
+        {
+          "color": "#3498db",
+          "x": "left",
+          "y": "top",
+          "width": "100%",
+          "height": "100%"
+        }
+      ]
     },
     "22": {
       "question": "Your whole family survives but you have little to no food.",
@@ -554,8 +1478,77 @@
         "all": "51"
       },
       "reward": {},
-      "images": [],
-      "backgrounds": [],
+      "images": [
+        {
+          "url": "frames/mountains.png",
+          "x": -500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/mountains.png",
+          "x": -1500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/mountains.png",
+          "x": 500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": -500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": -1500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": 500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        }
+      ],
+      "backgrounds": [
+        {
+          "color": "#2f3640",
+          "x": "left",
+          "y": "top",
+          "width": "100%",
+          "height": "100%"
+        }
+      ],
       "time": 7
     },
     "24": {
@@ -584,8 +1577,37 @@
           "endMessage": "While tending to your farm your family has died..."
         }
       },
-      "images": [],
-      "backgrounds": []
+      "images": [
+        {
+          "url": "frames/choleraA1.png",
+          "x": -350,
+          "y": 0,
+          "width": 300,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/choleraA2.png",
+          "x": 50,
+          "y": 0,
+          "width": 300,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        }
+      ],
+      "backgrounds": [
+        {
+          "color": "#3498db",
+          "x": "left",
+          "y": "top",
+          "width": "100%",
+          "height": "100%"
+        }
+      ]
     },
     "25": {
       "question": "The closest aid clinic is 50 miles away.",
@@ -605,7 +1627,18 @@
           "family": -2
         }
       },
-      "images": [],
+      "images": [
+        {
+          "url": "frames/redCross.png",
+          "x": -130,
+          "y": 0,
+          "width": 300,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        }
+      ],
       "backgrounds": []
     },
     "26": {
@@ -623,8 +1656,104 @@
           "endMessage": "You have used opium to combat the pain, 2 weeks later and you have overdosed from your addiction"
         }
       },
-      "images": [],
-      "backgrounds": []
+      "images": [
+        {
+          "url": "frames/tree.png",
+          "x": 130,
+          "y": -90,
+          "width": 100,
+          "height": 150,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/tree.png",
+          "x": -200,
+          "y": -80,
+          "width": 75,
+          "height": 125,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/cloud.png",
+          "x": -220,
+          "y": -300,
+          "width": 100,
+          "height": 60,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/cloud.png",
+          "x": 0,
+          "y": -280,
+          "width": 100,
+          "height": 60,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/cloud.png",
+          "x": 210,
+          "y": -363,
+          "width": 100,
+          "height": 60,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/cloud.png",
+          "x": -100,
+          "y": -350,
+          "width": 100,
+          "height": 60,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/farmerMirrored.png",
+          "x": -80,
+          "y": 10,
+          "width": 130,
+          "height": 120,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/death.png",
+          "x": 150,
+          "y": 10,
+          "width": 130,
+          "height": 120,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        }
+      ],
+      "backgrounds": [
+        {
+          "color": "#3498db",
+          "x": "left",
+          "y": "center",
+          "width": "100%",
+          "height": "100%"
+        },
+        {
+          "color": "#2ecc71",
+          "x": "left",
+          "y": "center",
+          "width": "100%",
+          "height": "180"
+        }
+      ]
     },
     "27": {
       "question": "You have been given the job to harvest poppy for the Taliban, You won't make as much from growing it yourself but the risk is a-lot lower",
@@ -639,8 +1768,77 @@
           "money": "100 * $efficiency"
         }
       },
-      "images": [],
-      "backgrounds": [],
+      "images": [
+        {
+          "url": "frames/mountains.png",
+          "x": -500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/mountains.png",
+          "x": -1500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/mountains.png",
+          "x": 500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": -500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": -1500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": 500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        }
+      ],
+      "backgrounds": [
+        {
+          "color": "#2f3640",
+          "x": "left",
+          "y": "top",
+          "width": "100%",
+          "height": "100%"
+        }
+      ],
       "time": 5
     },
     "28": {
@@ -657,7 +1855,9 @@
         "A": {
           "money": "150 * $efficiency"
         }
-      }
+      },
+      "images": [],
+      "backgrounds": []
     },
     "29": {
       "question": "What crops would you like to grow now?",
@@ -691,8 +1891,27 @@
           "food": 50
         }
       },
-      "images": [],
-      "backgrounds": []
+      "images": [
+        {
+          "url": "frames/plants.png",
+          "x": -560,
+          "y": 0,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        }
+      ],
+      "backgrounds": [
+        {
+          "color": "#9b59b6",
+          "x": "left",
+          "y": "top",
+          "width": "100%",
+          "height": "100%"
+        }
+      ]
     },
     "30": {
       "question": "A month has passed growing some of your new crops.",
@@ -705,8 +1924,77 @@
       "reward": {
         "food": "$food * 0.10"
       },
-      "images": [],
-      "backgrounds": [],
+      "images": [
+        {
+          "url": "frames/mountains.png",
+          "x": -500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/mountains.png",
+          "x": -1500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/mountains.png",
+          "x": 500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": -500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": -1500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": 500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        }
+      ],
+      "backgrounds": [
+        {
+          "color": "#2f3640",
+          "x": "left",
+          "y": "top",
+          "width": "100%",
+          "height": "100%"
+        }
+      ],
       "time": 5
     },
     "31": {
@@ -718,8 +2006,77 @@
         "all": "10"
       },
       "reward": {},
-      "images": [],
-      "backgrounds": [],
+      "images": [
+        {
+          "url": "frames/mountains.png",
+          "x": -500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/mountains.png",
+          "x": -1500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/mountains.png",
+          "x": 500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": -500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": -1500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": 500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        }
+      ],
+      "backgrounds": [
+        {
+          "color": "#2f3640",
+          "x": "left",
+          "y": "top",
+          "width": "100%",
+          "height": "100%"
+        }
+      ],
       "time": 5
     },
     "32": {
@@ -731,8 +2088,77 @@
         "all": "5"
       },
       "reward": {},
-      "images": [],
-      "backgrounds": [],
+      "images": [
+        {
+          "url": "frames/mountains.png",
+          "x": -500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/mountains.png",
+          "x": -1500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/mountains.png",
+          "x": 500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": -500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": -1500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": 500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        }
+      ],
+      "backgrounds": [
+        {
+          "color": "#2f3640",
+          "x": "left",
+          "y": "top",
+          "width": "100%",
+          "height": "100%"
+        }
+      ],
       "time": 5
     },
     "33": {
@@ -746,8 +2172,77 @@
       "reward": {
         "family": -2
       },
-      "images": [],
-      "backgrounds": [],
+      "images": [
+        {
+          "url": "frames/mountains.png",
+          "x": -500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/mountains.png",
+          "x": -1500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/mountains.png",
+          "x": 500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": -500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": -1500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": 500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        }
+      ],
+      "backgrounds": [
+        {
+          "color": "#2f3640",
+          "x": "left",
+          "y": "top",
+          "width": "100%",
+          "height": "100%"
+        }
+      ],
       "time": 5
     },
     "34": {
@@ -764,7 +2259,115 @@
         "A": {
           "money": "150 * $efficiency"
         }
-      }
+      },
+      "images": [
+        {
+          "url": "frames/tree.png",
+          "x": 100,
+          "y": -60,
+          "width": 150,
+          "height": 200,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/cloud.png",
+          "x": -220,
+          "y": -300,
+          "width": 100,
+          "height": 60,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/cloud.png",
+          "x": 0,
+          "y": -280,
+          "width": 100,
+          "height": 60,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/cloud.png",
+          "x": 210,
+          "y": -363,
+          "width": 100,
+          "height": 60,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/cloud.png",
+          "x": -100,
+          "y": -350,
+          "width": 100,
+          "height": 60,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/tree.png",
+          "x": -400,
+          "y": 20,
+          "width": 150,
+          "height": 200,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/tree.png",
+          "x": -280,
+          "y": -90,
+          "width": 150,
+          "height": 200,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/farmerMirrored.png",
+          "x": -80,
+          "y": 10,
+          "width": "auto",
+          "height": 100,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/add.png",
+          "x": 80,
+          "y": 10,
+          "width": 100,
+          "height": 100,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        }
+      ],
+      "backgrounds": [
+        {
+          "color": "#3498db",
+          "x": "left",
+          "y": "center",
+          "width": "100%",
+          "height": "100%"
+        },
+        {
+          "color": "#2ecc71",
+          "x": "left",
+          "y": "center",
+          "width": "100%",
+          "height": "180"
+        }
+      ]
     },
     "35": {
       "question": "A day has passed walking to the aid clinic, You have 20 miles to go.",
@@ -775,8 +2378,77 @@
         "all": "36"
       },
       "reward": {},
-      "images": [],
-      "backgrounds": [],
+      "images": [
+        {
+          "url": "frames/mountains.png",
+          "x": -500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/mountains.png",
+          "x": -1500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/mountains.png",
+          "x": 500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": -500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": -1500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": 500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        }
+      ],
+      "backgrounds": [
+        {
+          "color": "#2f3640",
+          "x": "left",
+          "y": "top",
+          "width": "100%",
+          "height": "100%"
+        }
+      ],
       "time": 5
     },
     "36": {
@@ -793,7 +2465,38 @@
         "A": {
           "efficiency": -0.2
         }
-      }
+      },
+      "images": [
+        {
+          "url": "frames/choleraB1.png",
+          "x": -350,
+          "y": 0,
+          "width": 300,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/choleraB2.png",
+          "x": 50,
+          "y": 0,
+          "width": 300,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        }
+      ],
+      "backgrounds": [
+        {
+          "color": "#0a3d62",
+          "x": "left",
+          "y": "top",
+          "width": "100%",
+          "height": "100%"
+        }
+      ]
     },
     "37": {
       "question": "You find a nice place to rest...",
@@ -808,8 +2511,77 @@
           "endMessage": "You have died in your sleep"
         }
       },
-      "images": [],
-      "backgrounds": [],
+      "images": [
+        {
+          "url": "frames/mountains.png",
+          "x": -500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/mountains.png",
+          "x": -1500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/mountains.png",
+          "x": 500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": -500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": -1500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": 500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        }
+      ],
+      "backgrounds": [
+        {
+          "color": "#2f3640",
+          "x": "left",
+          "y": "top",
+          "width": "100%",
+          "height": "100%"
+        }
+      ],
       "time": 5
     },
     "38": {
@@ -826,7 +2598,28 @@
         "A": {
           "endMessage": "win message 38"
         }
-      }
+      },
+      "images": [
+        {
+          "url": "frames/add.png",
+          "x": -150,
+          "y": 0,
+          "width": 300,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        }
+      ],
+      "backgrounds": [
+        {
+          "color": "#3498db",
+          "x": "left",
+          "y": "top",
+          "width": "100%",
+          "height": "100%"
+        }
+      ]
     },
     "39": {
       "question": "You arrive to the aid clinic, The doctors are able to cure you in time and you have been given food to replenish yourself.",
@@ -841,8 +2634,77 @@
           "food": "$food * 0.10"
         }
       },
-      "images": [],
-      "backgrounds": [],
+      "images": [
+        {
+          "url": "frames/mountains.png",
+          "x": -500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/mountains.png",
+          "x": -1500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/mountains.png",
+          "x": 500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": -500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": -1500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": 500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        }
+      ],
+      "backgrounds": [
+        {
+          "color": "#2f3640",
+          "x": "left",
+          "y": "top",
+          "width": "100%",
+          "height": "100%"
+        }
+      ],
       "time": 5
     },
     "40": {
@@ -862,7 +2724,28 @@
         "B": {
           "endMessage": "win message 40 B"
         }
-      }
+      },
+      "images": [
+        {
+          "url": "frames/plants.png",
+          "x": -500,
+          "y": 0,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        }
+      ],
+      "backgrounds": [
+        {
+          "color": "#3498db",
+          "x": "left",
+          "y": "top",
+          "width": "100%",
+          "height": "100%"
+        }
+      ]
     },
     "41": {
       "question": "After a rough journey you have arrived home.",
@@ -878,7 +2761,125 @@
         "A": {
           "endMessage": "win message 41 A"
         }
-      }
+      },
+      "images": [
+        {
+          "url": "frames/tree.png",
+          "x": 100,
+          "y": -60,
+          "width": 150,
+          "height": 200,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/cloud.png",
+          "x": -220,
+          "y": -300,
+          "width": 100,
+          "height": 60,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/cloud.png",
+          "x": 0,
+          "y": -280,
+          "width": 100,
+          "height": 60,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/cloud.png",
+          "x": 210,
+          "y": -363,
+          "width": 100,
+          "height": 60,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/cloud.png",
+          "x": -100,
+          "y": -350,
+          "width": 100,
+          "height": 60,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/crops.png",
+          "x": -100,
+          "y": -20,
+          "width": 200,
+          "height": "auto",
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/tree.png",
+          "x": -400,
+          "y": 20,
+          "width": 150,
+          "height": 200,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/tree.png",
+          "x": -280,
+          "y": -90,
+          "width": 150,
+          "height": 200,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/house.png",
+          "x": 200,
+          "y": 0,
+          "width": 200,
+          "height": 180,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/farmer-fork.png",
+          "x": 80,
+          "y": 10,
+          "width": 100,
+          "height": 100,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        }
+      ],
+      "backgrounds": [
+        {
+          "color": "#3498db",
+          "x": "left",
+          "y": "center",
+          "width": "100%",
+          "height": "100%"
+        },
+        {
+          "color": "#2ecc71",
+          "x": "left",
+          "y": "center",
+          "width": "100%",
+          "height": "180"
+        }
+      ]
     },
     "42": {
       "question": "A month has passed and your farm has fully grown and is ready to harvest.",
@@ -889,6 +2890,77 @@
         "all": "4"
       },
       "reward": {},
+      "images": [
+        {
+          "url": "frames/mountains.png",
+          "x": -500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/mountains.png",
+          "x": -1500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/mountains.png",
+          "x": 500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": -500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": -1500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": 500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        }
+      ],
+      "backgrounds": [
+        {
+          "color": "#2f3640",
+          "x": "left",
+          "y": "top",
+          "width": "100%",
+          "height": "100%"
+        }
+      ],
       "time": 5
     },
     "43": {
@@ -900,6 +2972,77 @@
         "all": "5"
       },
       "reward": {},
+      "images": [
+        {
+          "url": "frames/mountains.png",
+          "x": -500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/mountains.png",
+          "x": -1500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/mountains.png",
+          "x": 500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": -500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": -1500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": 500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        }
+      ],
+      "backgrounds": [
+        {
+          "color": "#2f3640",
+          "x": "left",
+          "y": "top",
+          "width": "100%",
+          "height": "100%"
+        }
+      ],
       "time": 5
     },
     "44": {
@@ -911,6 +3054,77 @@
         "all": "7"
       },
       "reward": {},
+      "images": [
+        {
+          "url": "frames/mountains.png",
+          "x": -500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/mountains.png",
+          "x": -1500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/mountains.png",
+          "x": 500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": -500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": -1500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": 500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        }
+      ],
+      "backgrounds": [
+        {
+          "color": "#2f3640",
+          "x": "left",
+          "y": "top",
+          "width": "100%",
+          "height": "100%"
+        }
+      ],
       "time": 5
     },
     "45": {
@@ -922,6 +3136,77 @@
         "all": "10"
       },
       "reward": {},
+      "images": [
+        {
+          "url": "frames/mountains.png",
+          "x": -500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/mountains.png",
+          "x": -1500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/mountains.png",
+          "x": 500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": -500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": -1500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": 500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        }
+      ],
+      "backgrounds": [
+        {
+          "color": "#2f3640",
+          "x": "left",
+          "y": "top",
+          "width": "100%",
+          "height": "100%"
+        }
+      ],
       "time": 5
     },
     "46": {
@@ -933,6 +3218,77 @@
         "all": "18"
       },
       "reward": {},
+      "images": [
+        {
+          "url": "frames/mountains.png",
+          "x": -500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/mountains.png",
+          "x": -1500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/mountains.png",
+          "x": 500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": -500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": -1500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": 500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        }
+      ],
+      "backgrounds": [
+        {
+          "color": "#2f3640",
+          "x": "left",
+          "y": "top",
+          "width": "100%",
+          "height": "100%"
+        }
+      ],
       "time": 5
     },
     "47": {
@@ -944,6 +3300,77 @@
         "all": "18"
       },
       "reward": {},
+      "images": [
+        {
+          "url": "frames/mountains.png",
+          "x": -500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/mountains.png",
+          "x": -1500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/mountains.png",
+          "x": 500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": -500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": -1500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": 500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        }
+      ],
+      "backgrounds": [
+        {
+          "color": "#2f3640",
+          "x": "left",
+          "y": "top",
+          "width": "100%",
+          "height": "100%"
+        }
+      ],
       "time": 5
     },
     "48": {
@@ -955,6 +3382,77 @@
         "all": "20"
       },
       "reward": {},
+      "images": [
+        {
+          "url": "frames/mountains.png",
+          "x": -500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/mountains.png",
+          "x": -1500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/mountains.png",
+          "x": 500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": -500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": -1500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": 500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        }
+      ],
+      "backgrounds": [
+        {
+          "color": "#2f3640",
+          "x": "left",
+          "y": "top",
+          "width": "100%",
+          "height": "100%"
+        }
+      ],
       "time": 5
     },
     "49": {
@@ -966,6 +3464,77 @@
         "all": "49"
       },
       "reward": {},
+      "images": [
+        {
+          "url": "frames/mountains.png",
+          "x": -500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/mountains.png",
+          "x": -1500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/mountains.png",
+          "x": 500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": -500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": -1500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": 500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        }
+      ],
+      "backgrounds": [
+        {
+          "color": "#2f3640",
+          "x": "left",
+          "y": "top",
+          "width": "100%",
+          "height": "100%"
+        }
+      ],
       "time": 5
     },
     "50": {
@@ -977,6 +3546,77 @@
         "all": "17"
       },
       "reward": {},
+      "images": [
+        {
+          "url": "frames/mountains.png",
+          "x": -500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/mountains.png",
+          "x": -1500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/mountains.png",
+          "x": 500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": -500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": -1500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": 500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        }
+      ],
+      "backgrounds": [
+        {
+          "color": "#2f3640",
+          "x": "left",
+          "y": "top",
+          "width": "100%",
+          "height": "100%"
+        }
+      ],
       "time": 5
     },
     "51": {
@@ -988,6 +3628,77 @@
         "all": "24"
       },
       "reward": {},
+      "images": [
+        {
+          "url": "frames/mountains.png",
+          "x": -500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/mountains.png",
+          "x": -1500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/mountains.png",
+          "x": 500,
+          "y": 48,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": -500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": -1500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        },
+        {
+          "url": "frames/coolCloud.png",
+          "x": 500,
+          "y": -200,
+          "width": 1000,
+          "height": "auto",
+          "rotation": 0,
+          "mirrorX": false,
+          "mirrorY": false
+        }
+      ],
+      "backgrounds": [
+        {
+          "color": "#2f3640",
+          "x": "left",
+          "y": "top",
+          "width": "100%",
+          "height": "100%"
+        }
+      ],
       "time": 5
     }
 
