@@ -32,6 +32,7 @@ let gameArea = {
     data: null,
     variables: null,
     objectives: null,
+    engGame: null,
     variable_icons: null,
     fontSize: 22,
     currentFrame: 0,
@@ -396,11 +397,23 @@ function handleReward(selectedOption){
         }
     }
 
-    completedObjective(function(complete){
-        if (complete) {
-            debuggerLog("User has hit objective!" + complete);
-        }
-    });
+    if(gameArea.variables['objectiveCheck'] == "true"){
+        completedObjective(function(complete){
+            if (complete != false) {
+                debuggerLog("User has hit objective! ->" + complete);
+            }
+        });
+
+        failedObjective(function(complete){
+            if (complete != false) {
+                debuggerLog("User has hit failure! -> " + complete);
+            }
+        });
+    } else {
+        debuggerLog('Objective check is false, Pregame must be still active');
+    }
+
+
 }
 
 function getObjectiveValues(){
@@ -421,8 +434,29 @@ function completedObjective(callback){
         objective = objectives[objective];
         for (var x = 0; x <= Object.keys(objective).length - 1; x++) {
             if (objective[Object.keys(objective)[x]] == variables[Object.keys(objective)[x]]){
-                if(objective[Object.keys(objective)[x + 1]] == variables[Object.keys(objective)[x + 1]]){
-                    callback(true);
+                if(objective[Object.keys(objective)[x + 1]] <= variables[Object.keys(objective)[x + 1]]){
+                    callback(Object.keys(objective)[x + 1]);
+                    debuggerLog('success');
+                    break;
+                } else {
+                    callback(false);
+                    break;
+                }
+            };
+        }
+    }
+}
+
+function failedObjective(callback){
+    let objectives = gameArea.engGame;
+    let variables = gameArea.variables;
+    for (var objective in objectives) {
+        objective = objectives[objective];
+        for (var x = 0; x <= Object.keys(objective).length - 1; x++) {
+            if (objective[Object.keys(objective)[x]] == variables[Object.keys(objective)[x]]){
+                if(objective[Object.keys(objective)[x + 1]] >= variables[Object.keys(objective)[x + 1]]){
+                    callback(Object.keys(objective)[x + 1]);
+                    debuggerLog('failed');
                     break;
                 } else {
                     callback(false);
@@ -685,6 +719,7 @@ function showStartScreen(callback){
         gameArea.data = data;
         gameArea.variables = gameArea.data['variables'];
         gameArea.objectives = gameArea.data['objectives'];
+        gameArea.endGame = gameArea.data['endgame'];
         gameArea.variable_icons = gameArea.data['variable_icons'];
         debuggerLog("Loaded game data, The game is ready to start when the user presses any key!");
 
