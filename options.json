@@ -140,6 +140,16 @@
           "rotation": 180,
           "mirrorX": false,
           "mirrorY": true
+        },
+        {
+          "url": "frames/fact1.png",
+          "x": -400,
+          "y": -250,
+          "width": 380,
+          "height": "auto",
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
         }
       ],
       "backgrounds": [
@@ -205,6 +215,16 @@
           "rotation": 0,
           "mirrorX": false,
           "mirrorY": false
+        },
+        {
+          "url": "frames/fact2.png",
+          "x": -600,
+          "y": -330,
+          "width": 380,
+          "height": "auto",
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
         }
       ],
       "backgrounds": [
@@ -263,6 +283,16 @@
           "rotation": 0,
           "mirrorX": false,
           "mirrorY": false
+        },
+        {
+          "url": "frames/fact3.png",
+          "x": -850,
+          "y": 0,
+          "width": 380,
+          "height": "auto",
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
         }
       ],
       "backgrounds": [
@@ -307,6 +337,16 @@
           "x": -200,
           "y": 10,
           "width": 400,
+          "height": "auto",
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/fact4.png",
+          "x": -600,
+          "y": -150,
+          "width": 380,
           "height": "auto",
           "rotation": 180,
           "mirrorX": false,
@@ -610,6 +650,16 @@
           "rotation": 180,
           "mirrorX": false,
           "mirrorY": false
+        },
+        {
+          "url": "frames/fact6.png",
+          "x": -400,
+          "y": -250,
+          "width": 380,
+          "height": "auto",
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
         }
       ],
       "backgrounds": [
@@ -671,6 +721,16 @@
           "rotation": 0,
           "mirrorX": false,
           "mirrorY": false
+        },
+        {
+          "url": "frames/fact6.png",
+          "x": -900,
+          "y": -150,
+          "width": 380,
+          "height": "auto",
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
         }
       ],
       "backgrounds": [
@@ -712,6 +772,16 @@
           "rotation": 0,
           "mirrorX": false,
           "mirrorY": false
+        },
+        {
+          "url": "frames/fact7.png",
+          "x": -700,
+          "y": -150,
+          "width": 380,
+          "height": "auto",
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
         }
       ],
       "backgrounds": [
@@ -756,6 +826,16 @@
           "rotation": 0,
           "mirrorX": false,
           "mirrorY": false
+        },
+        {
+          "url": "frames/fact8.png",
+          "x": -600,
+          "y": -150,
+          "width": 380,
+          "height": "auto",
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
         }
       ],
       "backgrounds": [
@@ -932,6 +1012,16 @@
           "rotation": 180,
           "mirrorX": false,
           "mirrorY": true
+        },
+        {
+          "url": "frames/fact10.png",
+          "x": -550,
+          "y": -200,
+          "width": 380,
+          "height": "auto",
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
         }
       ],
       "backgrounds": [
@@ -1069,6 +1159,16 @@
           "rotation": 0,
           "mirrorX": false,
           "mirrorY": false
+        },
+        {
+          "url": "frames/fact11.png",
+          "x": -550,
+          "y": -200,
+          "width": 380,
+          "height": "auto",
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
         }
       ],
       "backgrounds": [
@@ -1179,6 +1279,16 @@
           "y": 10,
           "width": 100,
           "height": 100,
+          "rotation": 180,
+          "mirrorX": false,
+          "mirrorY": true
+        },
+        {
+          "url": "frames/fact12.png",
+          "x": -550,
+          "y": -200,
+          "width": 380,
+          "height": "auto",
           "rotation": 180,
           "mirrorX": false,
           "mirrorY": true
@@ -2844,7 +2954,7 @@
       },
       "reward": {
         "A": {
-          "endMessage": "win message 38"
+          "endMessage": "You have successfully survived as a Afghan farmer!"
         }
       },
       "images": [
@@ -2967,10 +3077,10 @@
       },
       "reward": {
         "A": {
-          "endMessage": "win message 40 A"
+          "endMessage": "You store the food and realize that your gonna survive as a Afghan farmer with your family for quite while, Congrats!"
         },
         "B": {
-          "endMessage": "win message 40 B"
+          "endMessage": "You sell your food and you have made enough money to survive as a Afghan farmer with your family for quite a while, Congrats!"
         }
       },
       "images": [
@@ -3007,7 +3117,7 @@
       },
       "reward": {
         "A": {
-          "endMessage": "win message 41 A"
+          "endMessage": "You've made a lot of good choices and have survived as a Afghan farmer!"
         }
       },
       "images": [
@@ -3970,9 +4080,9 @@
     "background": "#000000"
   },
   "win": {
-    "url": "frames/win.png",
-    "width": 1063,
-    "height": 771,
+    "url": "frames/afganTrail.png",
+    "width": 1000,
+    "height": 440,
     "text": {
       "color": "#2ecc71",
       "size": 25,
@@ -3980,7 +4090,7 @@
       "x": "center",
       "y": "center"
     },
-    "background": "#bdc3c7"
+    "background": "#FFFFFF"
   },
   "objectives": [
     {
@@ -4007,29 +4117,42 @@
   "endgame": [
     {
       "id": 1,
-      "money": 400,
+      "money": 0,
       "family": 0,
       "food": 0
     },
     {
       "id": 2,
-      "money": 400,
+      "money": 0,
       "family": 0,
       "food": 0
     },
     {
       "id": 3,
-      "money": 400,
+      "money": 0,
       "family": 0,
       "food": 0
     },
     {
       "id": 4,
-      "money": 400,
+      "money": 0,
       "family": 0,
       "food": 0
     }
   ],
+  "variableEndMessage": {
+    "money": {
+      "win": "You have made enough money to survive as a Afghan farmer, Congrats!",
+      "end": "You have ran out of money preventing you to provide for your self or your family!"
+    },
+    "food": {
+      "win": "You have made enough food to survive as a Afghan farmer, Congrats!",
+      "end": "You have ran out of food preventing you to feed yourself or your family!"
+    },
+    "family": {
+      "end": "All of your family members have died..."
+    }
+  },
   "variables": {
     "id": 0,
     "objectiveCheck": "false",

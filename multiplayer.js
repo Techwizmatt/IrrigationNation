@@ -1,4 +1,9 @@
-var socket = io('http://techhost.co:234');
+var socket = io('http://techhost.co');
+
+if (getUrlParam('multiplayer', false) ){
+    socket = io('http://techhost.co:234');
+}
+
 
 var id = 0;
 var started = false;
@@ -62,6 +67,11 @@ function sendFrame(question, options, time){
 function createQR(){
     $('#joinQR').attr('src','https://api.qrserver.com/v1/create-qr-code/?data=http://techwizmatt.info/projects/school/eng/game/client?id='+ id +'&size=220x220&margin=0');
     $('#joinCode').text(id);
+    if (getUrlParam('event', false) == '2035946'){
+        $.get("http://techwizmatt.info/projects/school/eng/game/eventSnapcode/writeEvent.php?id=" + id, function( data ) {
+            debuggerLog(data);
+        });
+    }
 }
 
 function startTimer(time){

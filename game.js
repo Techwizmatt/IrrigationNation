@@ -33,6 +33,7 @@ let gameArea = {
     variables: null,
     objectives: null,
     engGame: null,
+    variableEndMessage: null,
     variable_icons: null,
     fontSize: 22,
     currentFrame: 0,
@@ -369,9 +370,10 @@ function drawVariables(callback){
     callback(true);
 }
 
-function handleReward(selectedOption){
+function handleReward(selectedOption, callback){
     var frame = gameArea.data.frames[gameArea.currentFrame];
     var rewards = frame['reward'];
+    var returnCallback = true;
     if (rewards[selectedOption] != null) {
         var reward = rewards[selectedOption];
         for (var variable in reward) {
@@ -400,17 +402,37 @@ function handleReward(selectedOption){
     if(gameArea.variables['objectiveCheck'] == "true"){
         completedObjective(function(complete){
             if (complete != false) {
+                returnCallback = false;
                 debuggerLog("User has hit objective! ->" + complete);
+
+                gameArea.variables['endMessage'] = gameArea.variableEndMessage[complete]['win'];
+
+                hitWinGame(function(){
+                    debuggerLog('User has won game!');
+                    callback('kill');
+                });
             }
         });
 
         failedObjective(function(complete){
             if (complete != false) {
+                returnCallback = false;
                 debuggerLog("User has hit failure! -> " + complete);
+
+                gameArea.variables['endMessage'] = gameArea.variableEndMessage[complete]['end'];
+
+                hitEndGame(function(){
+                    debuggerLog('Game has hit the end.');
+                    callback('kill');
+                });
             }
         });
     } else {
         debuggerLog('Objective check is false, Pregame must be still active');
+    }
+
+    if (returnCallback) {
+        callback();
     }
 
 
@@ -434,9 +456,8 @@ function completedObjective(callback){
         objective = objectives[objective];
         for (var x = 0; x <= Object.keys(objective).length - 1; x++) {
             if (objective[Object.keys(objective)[x]] == variables[Object.keys(objective)[x]]){
-                if(objective[Object.keys(objective)[x + 1]] <= variables[Object.keys(objective)[x + 1]]){
+                if(variables[Object.keys(objective)[x + 1]] >= objective[Object.keys(objective)[x + 1]]){
                     callback(Object.keys(objective)[x + 1]);
-                    debuggerLog('success');
                     break;
                 } else {
                     callback(false);
@@ -448,15 +469,14 @@ function completedObjective(callback){
 }
 
 function failedObjective(callback){
-    let objectives = gameArea.engGame;
+    let objectives = gameArea.endGame;
     let variables = gameArea.variables;
     for (var objective in objectives) {
         objective = objectives[objective];
         for (var x = 0; x <= Object.keys(objective).length - 1; x++) {
             if (objective[Object.keys(objective)[x]] == variables[Object.keys(objective)[x]]){
-                if(objective[Object.keys(objective)[x + 1]] >= variables[Object.keys(objective)[x + 1]]){
+                if(variables[Object.keys(objective)[x + 1]] <= objective[Object.keys(objective)[x + 1]]){
                     callback(Object.keys(objective)[x + 1]);
-                    debuggerLog('failed');
                     break;
                 } else {
                     callback(false);
@@ -548,6 +568,12 @@ function hitEndGame(callback){
 
                                 setTimeout(function(){
                                     fadeInText(ctx,"Press any key to restart...", (window.innerWidth / 2) - (ctx.measureText("Press any key to restart...").width / 2),(window.innerHeight - 200),255,255,255);
+
+                                    setTimeout(function(){
+                                        gameArea.canvas.getContext("2d").font = "15px main";
+                                        fadeInText(ctx,"Sources: https://bit.ly/2PqFHLB", window.innerWidth - ( ctx.measureText("Sources: https://bit.ly/2PqFHLB").width + 10 ),window.innerHeight - 30,255,255,255);
+                                    },1000);
+
                                     callback();
                                     window.addEventListener('keydown', handler);
                                 },500);
@@ -576,20 +602,20 @@ function hitWinGame(callback){
 
     var endMessage = gameArea.variables['endMessage'];
 
-    debuggerLog("Win message: " + endMessage);
+    debuggerLog("Winning message: " + endMessage);
 
-    var win = gameArea.data['win'];
+    var end = gameArea.data['win'];
 
     var ctx = gameArea.canvas.getContext("2d");
 
-    ctx.fillStyle = win['background'];
+    var img = new Image();
+
+    ctx.fillStyle = end['background'];
 
     ctx.fillRect(0,0, window.innerWidth, window.innerHeight);
 
-    var img = new Image();
-
-    var width = win['width'];
-    var height = win['height'];
+    var width = end['width'];
+    var height = end['height'];
 
     img.onload = function(){
 
@@ -604,9 +630,9 @@ function hitWinGame(callback){
 
     }();
 
-    img.src = win['url'];
+    img.src = end['url'];
 
-    var text = win['text'];
+    var text = end['text'];
 
     var x = text['x'];
     var y = text['y'];
@@ -630,26 +656,43 @@ function hitWinGame(callback){
 
         gameArea.canvas.getContext("2d").font = "40px main";
 
-        fadeInText(ctx,"Created by...", (window.innerWidth / 2) - 230,(window.innerHeight - 300),0,0,0);
+        fadeInText(ctx,"Created by", (window.innerWidth / 2) - (ctx.measureText("Created by").width / 2),(window.innerHeight - 300),0,0,0);
 
         setTimeout(function(){
             gameArea.canvas.getContext("2d").font = "24px main";
-            fadeInText(ctx,"Matthew Maggio (Software)", (window.innerWidth / 2) - 230,(window.innerHeight - 250),0,0,0);
+            fadeInText(ctx,"Matthew Maggio (Software)", (window.innerWidth / 2) - (ctx.measureText("Matthew Maggio (Software)").width / 2),(window.innerHeight - 250),0,0,0);
             setTimeout(function(){
-                fadeInText(ctx,"Austin Keller (Graphic Design)", (window.innerWidth / 2) - 230,(window.innerHeight - 215),0,0,0);
+                fadeInText(ctx,"Austin Keller (Graphic Design)", (window.innerWidth / 2) - (ctx.measureText("Austin Keller (Graphic Design)").width / 2),(window.innerHeight - 215),0,0,0);
                 setTimeout(function(){
-                    fadeInText(ctx,"Michael McCanna (Storyline designer)", (window.innerWidth / 2) - 230,(window.innerHeight - 180),0,0,0);
+                    fadeInText(ctx,"Michael McCanna (Storyline designer)", (window.innerWidth / 2) - (ctx.measureText("Michael McCanna (Storyline designer)").width / 2),(window.innerHeight - 180),0,0,0);
                     setTimeout(function(){
-                        fadeInText(ctx,"Ryan Atkinson (Storyline designer)", (window.innerWidth / 2) - 230,(window.innerHeight - 145),0,0,0);
+                        fadeInText(ctx,"Ryan Atkinson (Storyline designer)", (window.innerWidth / 2) - (ctx.measureText("Ryan Atkinson (Storyline designer)").width / 2),(window.innerHeight - 145),0,0,0);
                         setTimeout(function(){
-                            fadeInText(ctx,"Ashton Wilkinson (Storyline designer)", (window.innerWidth / 2) - 230,(window.innerHeight - 110),0,0,0);
-                            callback();
-                            window.addEventListener('keydown', handler);
+                            fadeInText(ctx,"Ashton Wilkinson (Storyline designer)", (window.innerWidth / 2) - (ctx.measureText("Ashton Wilkinson (Storyline designer)").width / 2),(window.innerHeight - 110),0,0,0);
+                            setTimeout(function(){
+                                gameArea.canvas.getContext("2d").font = "40px main";
+
+                                ctx.fillStyle = end['background'];
+                                ctx.fillRect(0,(window.innerHeight - 350), window.innerWidth, 500);
+
+                                setTimeout(function(){
+                                    fadeInText(ctx,"Press any key to restart...", (window.innerWidth / 2) - (ctx.measureText("Press any key to restart...").width / 2),(window.innerHeight - 200),0,0,0);
+
+                                    setTimeout(function(){
+                                        gameArea.canvas.getContext("2d").font = "15px main";
+                                        fadeInText(ctx,"Sources: https://bit.ly/2PqFHLB", window.innerWidth - ( ctx.measureText("Sources: https://bit.ly/2PqFHLB").width + 10 ),window.innerHeight - 30,0,0,0);
+                                    },1000);
+
+                                    callback();
+                                    window.addEventListener('keydown', handler);
+                                },500);
+                            }, 5000);
                         }, 1000);
                     }, 1000);
                 }, 1000);
             }, 1000);
         }, 1000);
+
 
         var handler = function (e) {
             window.removeEventListener('keydown', handler);
@@ -658,9 +701,6 @@ function hitWinGame(callback){
         };
 
     });
-
-
-    // ctx.fillText(endMessage,text['x'],text['y']);
 
 
 }
@@ -720,6 +760,7 @@ function showStartScreen(callback){
         gameArea.variables = gameArea.data['variables'];
         gameArea.objectives = gameArea.data['objectives'];
         gameArea.endGame = gameArea.data['endgame'];
+        gameArea.variableEndMessage = gameArea.data['variableEndMessage'];
         gameArea.variable_icons = gameArea.data['variable_icons'];
         debuggerLog("Loaded game data, The game is ready to start when the user presses any key!");
 
@@ -779,21 +820,26 @@ function listenKeyDown() {
         if (!varUndefined(nextFrame)){
 
             window.removeEventListener('keydown', handler);
-            handleReward(keyPressed);
+            handleReward(keyPressed, function(response){
+                if (nextFrame == "end") {
+                    hitEndGame(function(){
+                        debuggerLog('Game has hit the end.');
+                    });
+                    return;
+                } else if (nextFrame == "win"){
+                    hitWinGame(function(){
+                        debuggerLog('User has won game!');
+                    });
+                    return;
+                }
 
-            if (nextFrame == "end") {
-                hitEndGame(function(){
-                    debuggerLog('Game has hit the end.');
-                });
-                return;
-            } else if (nextFrame == "win"){
-                hitWinGame(function(){
-                   debuggerLog('User has won game!');
-                });
-            }
+                if (response == 'kill'){
+                    return;
+                }
 
-            gameArea.currentFrame = nextFrame;
-            transition();
+                gameArea.currentFrame = nextFrame;
+                transition();
+            });
 
         }
         return;
@@ -871,22 +917,6 @@ function fadeInText(ctx,text, x, y, R,G,B) {
             clearInterval(interval);
         }
     }, 50);
-}
-
-function getUrlParam(parameter, defaultvalue){
-    var urlparameter = defaultvalue;
-    if(window.location.href.indexOf(parameter) > -1){
-        urlparameter = getUrlVars()[parameter];
-    }
-    return urlparameter;
-}
-
-function getUrlVars() {
-    var vars = {};
-    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-        vars[key] = value;
-    });
-    return vars;
 }
 
 function replaceStringVariables(string) {
